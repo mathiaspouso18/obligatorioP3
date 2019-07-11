@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1353751060 source:f:\codeblocks projects\obligatoriop3\obligatorio\main.cpp
+	<iostream>
+
+1562863515 source:f:\codeblocks projects\obligatoriop3\obligatorio\string.cpp
+	"String.h"
+
+1562858572 f:\codeblocks projects\obligatoriop3\obligatorio\string.h
+	"Boolean.h"
+	<stdio.h>
+
+1562856065 f:\codeblocks projects\obligatoriop3\obligatorio\boolean.h
+
+1562862860 source:f:\codeblocks projects\obligatoriop3\obligatorio\diccionariociudades.cpp
+	"DiccionarioCiudades.h"
+
+1562863484 f:\codeblocks projects\obligatoriop3\obligatorio\diccionariociudades.h
+	"Lista.h"
+
+1562863483 f:\codeblocks projects\obligatoriop3\obligatorio\lista.h
+	"String.h"
+
+1562863506 source:f:\codeblocks projects\obligatoriop3\obligatorio\lista.cpp
+	"Lista.h"
+
+1562863544 source:f:\codeblocks projects\obligatoriop3\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1562863839 source:f:\codeblocks projects\obligatoriop3\obligatorio\linea.cpp
+	"Linea.h"
+
+1562864436 f:\codeblocks projects\obligatoriop3\obligatorio\linea.h
+	"ListaParadas.h"
+
+1562864041 source:f:\codeblocks projects\obligatoriop3\obligatorio\empresa.cpp
+	"Empresa.h"
+
+1562864121 f:\codeblocks projects\obligatoriop3\obligatorio\empresa.h
+	"Linea.h"
+
+1562864430 f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.h
+	"Parada.h"
+
+1562864344 f:\codeblocks projects\obligatoriop3\obligatorio\parada.h
+	"String.h"
+
+1562864626 source:f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.cpp
+	"ListaParadas.h"
+
