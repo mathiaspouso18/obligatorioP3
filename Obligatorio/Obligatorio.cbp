@@ -32,6 +32,22 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Boolean.cpp" />
+		<Unit filename="Boolean.h" />
+		<Unit filename="DiccionarioCiudades.cpp" />
+		<Unit filename="DiccionarioCiudades.h" />
+		<Unit filename="Empresa.cpp" />
+		<Unit filename="Empresa.h" />
+		<Unit filename="Linea.cpp" />
+		<Unit filename="Linea.h" />
+		<Unit filename="Lista.cpp" />
+		<Unit filename="Lista.h" />
+		<Unit filename="ListaParadas.cpp" />
+		<Unit filename="ListaParadas.h" />
+		<Unit filename="Parada.cpp" />
+		<Unit filename="Parada.h" />
+		<Unit filename="String.cpp" />
+		<Unit filename="String.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
