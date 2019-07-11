@@ -35,8 +35,8 @@
 1562864041 source:f:\codeblocks projects\obligatoriop3\obligatorio\empresa.cpp
 	"Empresa.h"
 
-1562864121 f:\codeblocks projects\obligatoriop3\obligatorio\empresa.h
-	"Linea.h"
+1562869017 f:\codeblocks projects\obligatoriop3\obligatorio\empresa.h
+	"ListaLineas.h"
 
 1562864430 f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.h
 	"Parada.h"
@@ -46,4 +46,10 @@
 
 1562864626 source:f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.cpp
 	"ListaParadas.h"
+
+1562864651 source:f:\codeblocks projects\obligatoriop3\obligatorio\parada.cpp
+	"Parada.h"
+
+1562868796 f:\codeblocks projects\obligatoriop3\obligatorio\listalineas.h
+	"Linea.h"
 
