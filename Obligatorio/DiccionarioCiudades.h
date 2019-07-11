@@ -11,5 +11,6 @@ void Insertar (Hash &H, String e);
 int Obtener (Hash H, String clave);
 void Eliminar (Hash &H, String clave);
 int h(String clave);
+int x;
 
 #endif // DICCIONARIOCIUDADES_H_INCLUDED
