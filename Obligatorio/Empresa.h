@@ -1,9 +1,10 @@
 #ifndef EMPRESA_H_INCLUDED
 #define EMPRESA_H_INCLUDED
-#include "ListaLineas.h"
+#include "AVLLineas.h"
 
 typedef struct {
-    ListaLineas listaLineas;
+    AVL Lineas;
+    Diccionario diccCiudades;
 }Empresa;
 
 #endif // EMPRESA_H_INCLUDED

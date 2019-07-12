@@ -10,4 +10,6 @@ typedef struct nodoP
 
 typedef NodoParada * ListaParadas;
 
+Parada DarParada(Lista l);
+
 #endif // LISTAPARADAS_H_INCLUDED

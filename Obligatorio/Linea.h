@@ -4,8 +4,8 @@
 
 typedef struct{
     String codigo;
-    String ciudOrigen;
-    String ciudDest;
+    Ciudad ciudOrigen;
+    Ciudad ciudDest;
     ListaParadas listaParadas;
 } Linea;
 

@@ -1,10 +1,13 @@
 #ifndef PARADA_H_INCLUDED
 #define PARADA_H_INCLUDED
-#include "String.h"
+#include "DiccionarioCiudades.h"
 
 typedef struct {
-    String NombreParada;
-    String Ciudad;
+    Ciudad ParadaCiudad;
+    int IdParada;
 }Parada;
+
+Ciudad DarCiudadParada(Parada p);
+int DarIDParada(Parada p);
 
 #endif // PARADA_H_INCLUDED
