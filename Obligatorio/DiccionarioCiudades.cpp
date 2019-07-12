@@ -1,37 +1,52 @@
 #include "DiccionarioCiudades.h"
 
-void Crear (Hash &H)
+void Make(Diccionario &d)
 {
-    int i;
-    for(i=0; i<B; i++)
-        CrearLista(H[i]);
+    for(int i = 0;i < B; i++)
+        CrearLista(d[i]);
 }
 
-Boolean Pertenece (Hash H, String clave)
+Boolean Member(Diccionario d, String clave)
 {
+    Boolean pertenece = FALSE;
     int cubeta = h(clave);
-    return PerteneceLista (H[cubeta],clave);
+    Lista aux = d[cubeta];
+    while(!pertenece && aux != NULL)
+    {
+        String nombreCiu;
+        DarNombreLista(aux, nombreCiu);
+        if(streq(nombreCiu, clave))
+            pertenece= TRUE;
+        else
+            aux = aux->sig;
+    }
+    return pertenece;
 }
 
-//Precondición: !Pertenece(H,DarClave(e))
-void Insertar (Hash &H, String e)
+Ciudad Find(Diccionario d, String nombre)
 {
-    int cubeta = h(e);
-    Insfront(H[cubeta],e);
+    int cubeta = h(nombre);
+    Boolean esta = FALSE;
+    Lista aux = d[cubeta];
+    while(!esta && aux != NULL)
+    {
+        String nombreCiu;
+        DarNombreCiudad(aux->info, nombreCiu);
+        if(streq(nombreCiu, nombre))
+            esta = TRUE;
+        else
+            aux = aux->sig;
+    }
+    return aux->info;
+
 }
 
-//Precondición: !Pertenece(H,DarClave(e))
-int Obtener (Hash H, String clave)
+void Insert(Diccionario &d, Ciudad c)
 {
-    int cubeta = h(clave);
-    return ObtenerEnLista (H[cubeta],clave);
-}
-
-//Precondición: !Pertenece(H,DarClave(e))
-void Eliminar (Hash &H, String clave)
-{
-    int cubeta = h(clave);
-    BorrarEnLista (H[cubeta],clave);
+    String n;
+    DarNombreCiudad(c, n);
+    int cubeta = h(n);
+    InsFrontLista(d[cubeta], c);
 }
 
 int h(String clave)

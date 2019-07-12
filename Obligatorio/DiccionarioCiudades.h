@@ -1,16 +1,14 @@
 #ifndef DICCIONARIOCIUDADES_H_INCLUDED
 #define DICCIONARIOCIUDADES_H_INCLUDED
-#include "Lista.h"
+#include "ListaHash.h"
 
 const int B = 10;
-typedef Lista Hash[B];
+typedef Lista Diccionario[B];
 
-void Crear (Hash &H);
-Boolean Pertenece (Hash H, String clave);
-void Insertar (Hash &H, String e);
-int Obtener (Hash H, String clave);
-void Eliminar (Hash &H, String clave);
+void Make(Diccionario &d);
+Boolean Member(Diccionario d, String clave);
+void Insert(Diccionario &d, String n);
+Ciudad Find(Diccionario d, String nombre);
 int h(String clave);
-int x;
 
 #endif // DICCIONARIOCIUDADES_H_INCLUDED

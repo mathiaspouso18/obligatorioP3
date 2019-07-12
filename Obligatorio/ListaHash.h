@@ -1,19 +1,20 @@
 #ifndef LISTA_H_INCLUDED
 #define LISTA_H_INCLUDED
-#include "String.h"
+#include "Ciudad.h"
 
 typedef struct nodoL
 {
-    String info;
+    Ciudad info;
     nodoL * sig;
 } Nodo;
 
 typedef Nodo * Lista;
 
 void CrearLista (Lista &L);
-void Insfront(Lista &L, String s);
+void InsFrontLista(Lista &L, Ciudad c);
 Boolean PerteneceLista(Lista L, String clave);
-String DarInfoLista(Lista L);
+Ciudad DarCiudadLista(Lista L);
 int ObtenerEnLista(Lista L, String clave);
 void BorrarEnLista(Lista &L, String clave);
+void DarNombreLista(Lista l, String &nombre);
 #endif // LISTA_H_INCLUDED

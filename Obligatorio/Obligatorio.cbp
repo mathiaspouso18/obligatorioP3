@@ -34,14 +34,16 @@
 		</Compiler>
 		<Unit filename="Boolean.cpp" />
 		<Unit filename="Boolean.h" />
+		<Unit filename="Ciudad.cpp" />
+		<Unit filename="Ciudad.h" />
 		<Unit filename="DiccionarioCiudades.cpp" />
 		<Unit filename="DiccionarioCiudades.h" />
 		<Unit filename="Empresa.cpp" />
 		<Unit filename="Empresa.h" />
 		<Unit filename="Linea.cpp" />
 		<Unit filename="Linea.h" />
-		<Unit filename="Lista.cpp" />
-		<Unit filename="Lista.h" />
+		<Unit filename="ListaHash.cpp" />
+		<Unit filename="ListaHash.h" />
 		<Unit filename="ListaLineas.cpp" />
 		<Unit filename="ListaLineas.h" />
 		<Unit filename="ListaParadas.cpp" />

@@ -1,4 +1,4 @@
-#include "Lista.h"
+#include "ListaHash.h"
 
 void CrearLista (Lista &L)
 {
@@ -9,9 +9,11 @@ Boolean PerteneceLista(Lista L, String clave)
 {
     Boolean pertenece = FALSE;
     Lista aux = L;
+    String nombreAux;
     while(aux != NULL && !pertenece)
     {
-        if(streq(aux->info, clave))
+        DarNombreCiudad(aux->info, nombreAux);
+        if(streq(nombreAux, clave))
             pertenece = TRUE;
         else
             aux = aux -> sig;
@@ -20,15 +22,15 @@ Boolean PerteneceLista(Lista L, String clave)
     return pertenece;
 }
 
-String DarInfoLista(Lista L, String &clave)
+Ciudad DarCiudadLista(Lista L)
 {
-    strcop(clave, L->info);
+    return L->info;
 }
 
-void Insfront(Lista &L, String s)
+void InsFrontLista(Lista &L, Ciudad c)
 {
     Lista aux = new Nodo;
-	strcop(aux -> info, s);
+    aux -> info = c;
 	aux -> sig = L;
 	L = aux;
 }
@@ -40,4 +42,9 @@ int ObtenerEnLista(Lista L, String clave)
 void BorrarEnLista(Lista &L, String clave)
 {
 
+}
+
+void DarNombreLista(Lista l, String &nombre)
+{
+    DarNombreCiudad(l->info, nombre);
 }
