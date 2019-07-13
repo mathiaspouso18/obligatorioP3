@@ -6,7 +6,7 @@
 typedef struct {String nombre;
                 int ID;} Ciudad;
 
-void CrearCiudad(Ciudad &c);
+void CrearCiudad(Ciudad &c, String s, int ID);
 void DarNombreCiudad(Ciudad c, String &s);
 int DarIDCiudad(Ciudad c);
 #endif // CIUDAD_H_INCLUDED
