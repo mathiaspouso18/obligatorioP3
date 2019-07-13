@@ -3,7 +3,6 @@
 void Make(AVL &a)
 {
     a = NULL;
-    a->altura = 0;
 }
 
 Boolean Vacio (AVL a)

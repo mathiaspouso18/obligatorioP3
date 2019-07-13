@@ -50,6 +50,8 @@
 		<Unit filename="ListaHash.h" />
 		<Unit filename="ListaParadas.cpp" />
 		<Unit filename="ListaParadas.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="Parada.cpp" />
 		<Unit filename="Parada.h" />
 		<Unit filename="String.cpp" />

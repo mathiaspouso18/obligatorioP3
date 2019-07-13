@@ -44,9 +44,10 @@
 1562962789 source:f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.cpp
 	"ListaParadas.h"
 
-1563038935 source:f:\codeblocks projects\obligatoriop3\obligatorio\main.cpp
+1563047465 source:f:\codeblocks projects\obligatoriop3\obligatorio\main.cpp
 	<iostream>
 	"Empresa.h"
+	"Menu.h"
 
 1562962554 source:f:\codeblocks projects\obligatoriop3\obligatorio\parada.cpp
 	"Parada.h"
@@ -63,11 +64,17 @@
 1563035842 f:\codeblocks projects\obligatoriop3\obligatorio\ciudad.h
 	"String.h"
 
-1563037958 source:f:\codeblocks projects\obligatoriop3\obligatorio\avllineas.cpp
+1563047506 source:f:\codeblocks projects\obligatoriop3\obligatorio\avllineas.cpp
 	"AVLLineas.h"
 
 1562962354 source:f:\codeblocks projects\obligatoriop3\obligatorio\grafotramos.cpp
 
 1563039864 f:\codeblocks projects\obligatoriop3\obligatorio\avllineas.h
 	"Linea.h"
+
+1563047434 source:f:\codeblocks projects\obligatoriop3\obligatorio\menu.cpp
+	"Menu.h"
+
+1563047393 f:\codeblocks projects\obligatoriop3\obligatorio\menu.h
+	<stdio.h>
 
