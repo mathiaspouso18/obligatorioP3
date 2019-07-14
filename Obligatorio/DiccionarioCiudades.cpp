@@ -64,6 +64,5 @@ void CargarDiccionarioCiudades (Diccionario &d){
         Ciudad c;
         CrearCiudad(c,s,i+1);
         InsertDiccionario(d,c);
-
     }
 }
