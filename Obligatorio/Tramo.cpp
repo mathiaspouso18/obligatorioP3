@@ -15,5 +15,11 @@ Ciudad DarDestinoTramo(Tramo t){
     return t.destino;
 }
 
+int IdOrigenTramo(Tramo t){
+    return DarIDCiudad(t.origen);
+}
 
+int IdDestinoTramo(Tramo t){
+    return DarIDCiudad(t.destino);
+}
 
