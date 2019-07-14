@@ -32,24 +32,24 @@
 1563127438 f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.h
 	"Parada.h"
 
-1563127438 f:\codeblocks projects\obligatoriop3\obligatorio\parada.h
+1563134197 f:\codeblocks projects\obligatoriop3\obligatorio\parada.h
 	"DiccionarioCiudades.h"
 
-1563132109 source:f:\codeblocks projects\obligatoriop3\obligatorio\linea.cpp
+1563133185 source:f:\codeblocks projects\obligatoriop3\obligatorio\linea.cpp
 	"Linea.h"
 
 1562868829 source:f:\codeblocks projects\obligatoriop3\obligatorio\listalineas.cpp
 	"ListaLineas.h"
 
-1563127438 source:f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.cpp
+1563134178 source:f:\codeblocks projects\obligatoriop3\obligatorio\listaparadas.cpp
 	"ListaParadas.h"
 
-1563131937 source:f:\codeblocks projects\obligatoriop3\obligatorio\main.cpp
+1563133311 source:f:\codeblocks projects\obligatoriop3\obligatorio\main.cpp
 	<iostream>
 	"Empresa.h"
 	"Menu.h"
 
-1563127438 source:f:\codeblocks projects\obligatoriop3\obligatorio\parada.cpp
+1563134160 source:f:\codeblocks projects\obligatoriop3\obligatorio\parada.cpp
 	"Parada.h"
 
 1563129341 source:f:\codeblocks projects\obligatoriop3\obligatorio\string.cpp
@@ -78,10 +78,10 @@
 1563047393 f:\codeblocks projects\obligatoriop3\obligatorio\menu.h
 	<stdio.h>
 
-1563131409 source:f:\codeblocks projects\obligatoriop3\obligatorio\abblineas.cpp
+1563134080 source:f:\codeblocks projects\obligatoriop3\obligatorio\abblineas.cpp
 	"ABBLineas.h"
 
-1563131258 f:\codeblocks projects\obligatoriop3\obligatorio\abblineas.h
+1563134049 f:\codeblocks projects\obligatoriop3\obligatorio\abblineas.h
 	"Linea.h"
 
 1563128039 source:f:\codeblocks projects\obligatoriop3\obligatorio\tramo.cpp

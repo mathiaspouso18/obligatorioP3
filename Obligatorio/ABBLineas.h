@@ -13,9 +13,9 @@ typedef NodoABB * ABB;
 
 void Make(ABB &a);
 Boolean Vacio (ABB a);
-Boolean Member (ABB a, Linea l);
+Boolean Member(ABB a, String codigo);
 void Insert (ABB &a, Linea l);
-Linea Find(ABB a, int ID);
+Linea Find(ABB a, String codigo);
 void Delete(ABB &a, int ID);
 void ListarLineas(ABB a);
 

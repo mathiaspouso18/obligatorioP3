@@ -14,14 +14,58 @@ Boolean Vacio (ABB a)
     return es;
 }
 
-Linea Find(ABB a, int ID)
+Linea Find(ABB a, String codigo)
 {
+    Linea l;
+	Boolean seguir = TRUE;
+	String codigo_linea_abb;
 
+	while(seguir)
+    {
+        if(a == NULL)
+        {
+            seguir = FALSE;
+        }
+        else
+        {
+            DarCodigoLinea(a->info, codigo_linea_abb);
+            if(streq(codigo, codigo_linea_abb)){
+                l = a->info;
+                seguir = FALSE;
+            }
+            else
+            {
+                if(!EsMayor(codigo_linea_abb, codigo))
+                    a = a->hizq;
+                else
+                    a = a->hder;
+            }
+        }
+	}
+	return l;
 }
 
-Boolean Member(ABB a, Linea l)
+Boolean Member(ABB a, String codigo)
 {
+    Boolean existe = FALSE;
+    String codigo_linea_abb;
 
+    while(existe != TRUE && a != NULL)
+    {
+        DarCodigoLinea(a->info, codigo_linea_abb);
+        if(streq(codigo, codigo_linea_abb))
+        {
+            existe = TRUE;
+        }
+        else
+        {
+            if(!EsMayor(codigo_linea_abb, codigo))
+                a = a->hizq;
+            else
+                a = a->hder;
+        }
+    }
+    return existe;
 }
 
 void Delete(ABB &a, int ID)
@@ -53,9 +97,9 @@ void Insert (ABB &a, Linea l)
 void ListarLineas(ABB a)
 {
     if (a != NULL)
-	{
-		ListarLineas(a->hizq);
-		MostrarLinea(a->info);
-		ListarLineas(a->hder);
-	}
+    {
+        ListarLineas(a->hizq);
+        MostrarLinea(a->info);
+        ListarLineas(a->hder);
+    }
 }

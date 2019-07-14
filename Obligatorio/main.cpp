@@ -26,31 +26,39 @@ int main()
             String codigo, co, cd;
             printf("\nIngrese codigo de linea: ");
             scan(codigo);
-            printf("Ingrese Ciudad de origen: ");
-            scan(co);
-            while(!Member(Ciudades, co))
+            if(!Member(Lineas, codigo))
             {
-                printf("No existe la ciudad con el nombre ");
-                print(co);
-                printf("; Ingrese nuevamente: ");
+                printf("Ingrese Ciudad de origen: ");
                 scan(co);
-            }
-            CiudadO = Find(Ciudades, co);
-            printf("Ingrese Ciudad de destino: ");
-            scan(cd);
-            while(!Member(Ciudades, cd))
-            {
-                printf("No existe la ciudad con el nombre ");
-                print(cd);
-                printf("; Ingrese nuevamente: ");
+                while(!Member(Ciudades, co))
+                {
+                    printf("No existe la ciudad con el nombre ");
+                    print(co);
+                    printf("; Ingrese nuevamente: ");
+                    scan(co);
+                }
+                CiudadO = Find(Ciudades, co);
+                printf("Ingrese Ciudad de destino: ");
                 scan(cd);
+                while(!Member(Ciudades, cd))
+                {
+                    printf("No existe la ciudad con el nombre ");
+                    print(cd);
+                    printf("; Ingrese nuevamente: ");
+                    scan(cd);
+                }
+                CiudadD = Find(Ciudades, cd);
+                CrearLinea(linea, codigo, CiudadO, CiudadD);
+                Insert(Lineas, linea);
             }
-            CiudadD = Find(Ciudades, cd);
-            CrearLinea(linea, codigo, CiudadO, CiudadD);
-            Insert(Lineas, linea);
+            else
+                printf("Ya existe una linea con dicho codigo\n");
             break;
         case 5:
-            ListarLineas(Lineas);
+            if(Lineas != NULL)
+                ListarLineas(Lineas);
+            else
+                printf("No hay lineas que mostrar.");
             break;
         }
     }
