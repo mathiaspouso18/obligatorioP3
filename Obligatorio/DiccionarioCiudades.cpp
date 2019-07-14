@@ -41,7 +41,7 @@ Ciudad Find(Diccionario d, String nombre)
 
 }
 
-void Insert(Diccionario &d, Ciudad c)
+void InsertDiccionario(Diccionario &d, Ciudad c)
 {
     String n;
     DarNombreCiudad(c, n);
@@ -52,4 +52,18 @@ void Insert(Diccionario &d, Ciudad c)
 int h(String clave)
 {
     return SumarASCII(clave) % B;
+}
+
+void CargarDiccionarioCiudades (Diccionario &d){
+    printf("\nIngrese las ciudades que la empresa visita \n");
+    for(int i = 0; i<B; i++){
+        printf("\nIngrese la ciudad %d: ", i+1);
+        String s;
+        strcrear(s);
+        scan(s);
+        int claveCiudad = h(s);
+        Ciudad c;
+        CrearCiudad(c,s,i+1);
+        InsertDiccionario(d,c);
+    }
 }

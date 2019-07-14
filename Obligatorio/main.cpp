@@ -18,6 +18,7 @@ int main()
 
         switch(opcion)
         {
+        case 1: CargarDiccionarioCiudades(Ciudades);
         }
     }while(opcion != 0);
 }

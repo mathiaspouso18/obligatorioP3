@@ -5,8 +5,10 @@
 typedef struct {
     Ciudad ParadaCiudad;
     int IdParada;
-}Parada;
+} Parada;
 
+Parada CrearParada (Ciudad c, int x);
+// Selectoras
 Ciudad DarCiudadParada(Parada p);
 int DarIDParada(Parada p);
 
