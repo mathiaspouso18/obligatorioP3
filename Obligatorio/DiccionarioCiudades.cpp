@@ -61,9 +61,9 @@ void CargarDiccionarioCiudades (Diccionario &d){
         String s;
         strcrear(s);
         scan(s);
-        int claveCiudad = h(s);
         Ciudad c;
         CrearCiudad(c,s,i+1);
         InsertDiccionario(d,c);
+
     }
 }
