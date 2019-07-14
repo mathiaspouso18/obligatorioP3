@@ -7,7 +7,7 @@ typedef struct {
     int IdParada;
 } Parada;
 
-Parada CrearParada (Ciudad c, int x);
+void CrearParada (Parada &p, Ciudad c, int x);
 // Selectoras
 Ciudad DarCiudadParada(Parada p);
 int DarIDParada(Parada p);
