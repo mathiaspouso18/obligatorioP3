@@ -31,6 +31,8 @@ void strswp (String &s1, String &s2);
 /* imprime el string s por pantalla */
 void print (String s);
 
+Boolean EsMayor(String s1, String s2);
+
 Boolean streq(String s1, String s2);
 
 int SumarASCII(String s);

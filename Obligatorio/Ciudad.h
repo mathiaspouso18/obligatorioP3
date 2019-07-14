@@ -9,4 +9,5 @@ typedef struct {String nombre;
 void CrearCiudad(Ciudad &c, String s, int ID);
 void DarNombreCiudad(Ciudad c, String &s);
 int DarIDCiudad(Ciudad c);
+void MostrarNombre(Ciudad c);
 #endif // CIUDAD_H_INCLUDED

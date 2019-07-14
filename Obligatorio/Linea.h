@@ -9,4 +9,8 @@ typedef struct{
     ListaParadas listaParadas;
 } Linea;
 
+void CrearLinea(Linea &l, String codigo, Ciudad orig, Ciudad dest);
+void DarCodigoLinea(Linea l, String &s);
+void MostrarLinea(Linea l);
+
 #endif // LINEA_H_INCLUDED

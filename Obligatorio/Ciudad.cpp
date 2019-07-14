@@ -15,3 +15,8 @@ int DarIDCiudad(Ciudad c)
 {
     return c.ID;
 }
+
+void MostrarNombre(Ciudad c)
+{
+    print(c.nombre);
+}

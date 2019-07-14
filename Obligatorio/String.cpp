@@ -108,10 +108,35 @@ Boolean streq(String s1, String s2)
 
 int SumarASCII(String s)
 {
-    int total = 0;
-    for(int i=0;i<strlar(s);i++)
+    int total = 0, largoNom = 0;
+    largoNom = strlar(s);
+    for(int i=0;i<largoNom;i++)
     {
         total = total + s[i];
     }
     return total;
+}
+
+Boolean EsMayor(String s1, String s2)
+{
+	Boolean es = FALSE, stop = FALSE;
+	int i = 0;
+
+	while(!stop && ((s1[i] != '\0') || (s2[i] != '\0'))){
+		if(s1[i] < s2[i])
+		{
+			es = TRUE;
+			stop = TRUE;
+		}
+		else
+		{
+			if(s1[i] > s2[i])
+			{
+				es = FALSE;
+				stop = TRUE;
+			}
+		}
+		i++;
+	}
+	return es;
 }
