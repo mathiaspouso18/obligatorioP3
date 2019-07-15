@@ -31,12 +31,9 @@ void strswp (String &s1, String &s2);
 /* imprime el string s por pantalla */
 void print (String s);
 
-/* Compara dos strings */
-Boolean comparaStrings(String s, String s1);
-
-
 Boolean EsMayor(String s1, String s2);
 
+/* Compara dos strings */
 Boolean streq(String s1, String s2);
 
 int SumarASCII(String s);

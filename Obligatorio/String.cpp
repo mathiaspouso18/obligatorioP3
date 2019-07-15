@@ -140,20 +140,3 @@ Boolean EsMayor(String s1, String s2)
 	}
 	return es;
 }
-
-/* Comparar 2 strings y determinar si son iguales */
-Boolean comparaStrings(String s, String s1){
-    int i=0;
-    Boolean iguales = TRUE;
-	if(strlar(s) == strlar(s1)){
-	    while (s[i] != '\0' && iguales == TRUE){
-    	    if(s[i] != s1[i]){
-        		iguales = FALSE;
-        	}
-        	i++;
-        }
-    }else{
-    	iguales = FALSE;
-    }
-    return iguales;
-}
