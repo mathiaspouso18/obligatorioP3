@@ -1,6 +1,6 @@
 #include <iostream>
+#include "Empresa.h"
 #include "Menu.h"
-#include "ABBLineas.h"
 using namespace std;
 
 int main()
@@ -11,9 +11,10 @@ int main()
     Diccionario Ciudades;
     Make(Ciudades);
     Make(Lineas);
-
-    printf("*****************BIENVENIDO AL SISTEMA DE ADMINISTRACION DE TRANSPORTE*****************\n");
-    CargarDiccionarioCiudades(Ciudades);
+    Ciudad CiudadO, CiudadD;
+    String codigo, co, cd;
+    Tramo t;
+    Boolean encontre;
 
     do
     {
@@ -21,9 +22,39 @@ int main()
 
         switch(opcion)
         {
-        case 3:
-            Ciudad CiudadO, CiudadD;
-            String codigo, co, cd;
+        case 1:
+            CargarDiccionarioCiudades(Ciudades);
+            break;
+        case 2:
+            printf("\n\n\tCrear un nuevo tramo\n");
+            printf("\nIngese ciudad origen del tramo: ");
+            scan(co);
+            if(!Member(Ciudades,co)){
+                encontre = FALSE;
+                while(!encontre){
+                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    scan(co);
+                    if(Member(Ciudades,co))
+                        encontre = TRUE;
+               }
+            }
+            printf("\nIngese ciudad destino del tramo: ");
+            scan(cd);
+            if(!Member(Ciudades,cd)){
+                encontre = FALSE;
+                while(!encontre){
+                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    scan(cd);
+                    if(Member(Ciudades,cd))
+                        encontre = TRUE;
+               }
+            }
+            CiudadO = Find(Ciudades,co);
+            CiudadD = Find(Ciudades,cd);
+            CrearTramo(t,CiudadO,CiudadD);
+            printf("\n\n\n#### Tramo creado con exito ####\n\n\n");
+            break;
+        case 4:
             printf("\nIngrese codigo de linea: ");
             scan(codigo);
             if(!Member(Lineas, codigo))
@@ -54,22 +85,11 @@ int main()
             else
                 printf("Ya existe una linea con dicho codigo\n");
             break;
-        case 4:
+        case 5:
             if(Lineas != NULL)
                 ListarLineas(Lineas);
             else
                 printf("No hay lineas que mostrar.");
-            break;
-        case 5:
-                String cod;
-                printf("\nIngrese el codigo de la linea: ");
-                scan(cod);
-                if(Member(Lineas, cod))
-                {
-
-                }
-                else
-                    printf("No existe dicha linea");
             break;
         }
     }

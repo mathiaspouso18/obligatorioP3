@@ -33,6 +33,7 @@ void print (String s);
 
 Boolean EsMayor(String s1, String s2);
 
+/* Compara dos strings */
 Boolean streq(String s1, String s2);
 
 int SumarASCII(String s);
