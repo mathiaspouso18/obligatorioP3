@@ -11,6 +11,10 @@ int main()
     Diccionario Ciudades;
     Make(Ciudades);
     Make(Lineas);
+    Ciudad CiudadO, CiudadD;
+    String codigo, co, cd;
+    Tramo t;
+    Boolean encontre;
 
     do
     {
@@ -21,9 +25,36 @@ int main()
         case 1:
             CargarDiccionarioCiudades(Ciudades);
             break;
+        case 2:
+            printf("\n\n\tCrear un nuevo tramo\n");
+            printf("\nIngese ciudad origen del tramo: ");
+            scan(co);
+            if(!Member(Ciudades,co)){
+                encontre = FALSE;
+                while(!encontre){
+                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    scan(co);
+                    if(Member(Ciudades,co))
+                        encontre = TRUE;
+               }
+            }
+            printf("\nIngese ciudad destino del tramo: ");
+            scan(cd);
+            if(!Member(Ciudades,cd)){
+                encontre = FALSE;
+                while(!encontre){
+                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    scan(cd);
+                    if(Member(Ciudades,cd))
+                        encontre = TRUE;
+               }
+            }
+            CiudadO = Find(Ciudades,co);
+            CiudadD = Find(Ciudades,cd);
+            CrearTramo(t,CiudadO,CiudadD);
+            printf("\n\n\n#### Tramo creado con exito ####\n\n\n");
+            break;
         case 4:
-            Ciudad CiudadO, CiudadD;
-            String codigo, co, cd;
             printf("\nIngrese codigo de linea: ");
             scan(codigo);
             if(!Member(Lineas, codigo))

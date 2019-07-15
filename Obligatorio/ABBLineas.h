@@ -2,6 +2,7 @@
 #define ABBLINEAS_H_INCLUDED
 
 #include "Linea.h"
+#include "GrafoTramos.h"
 
 typedef struct nodoA
 {

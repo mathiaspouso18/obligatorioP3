@@ -62,6 +62,16 @@ void CargarDiccionarioCiudades (Diccionario &d){
         strcrear(s);
         scan(s);
         Ciudad c;
+        if(Member(d,s)){
+            Boolean encontre = TRUE;
+            while(encontre){
+                printf("\nLa ciudad ingresada ya se encuentra ingresada, intente nuevamente\n\n");
+                printf("\nIngrese la ciudad %d: ", i+1);
+                scan(s);
+                if(!Member(d,s))
+                    encontre = FALSE;
+           }
+        }
         CrearCiudad(c,s,i+1);
         InsertDiccionario(d,c);
     }
