@@ -21,6 +21,11 @@ Parada DarParada(ListaParadas l)
     return l->info;
 }
 
-int ObtenerIdListaParadas (ListaParadas l, Parada p){
+int ObtenerIdListaParadas (ListaParadas l){
     return DarIDParada(l->info);
+}
+
+int DarUltimoIdParadas(ListaParadas l)
+{
+
 }

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Empresa.h"
 #include "Menu.h"
+#include "ABBLineas.h"
 using namespace std;
 
 int main()
@@ -12,16 +12,16 @@ int main()
     Make(Ciudades);
     Make(Lineas);
 
+    printf("*****************BIENVENIDO AL SISTEMA DE ADMINISTRACION DE TRANSPORTE*****************\n");
+    CargarDiccionarioCiudades(Ciudades);
+
     do
     {
         MenuPrincipal(opcion);
 
         switch(opcion)
         {
-        case 1:
-            CargarDiccionarioCiudades(Ciudades);
-            break;
-        case 4:
+        case 3:
             Ciudad CiudadO, CiudadD;
             String codigo, co, cd;
             printf("\nIngrese codigo de linea: ");
@@ -54,11 +54,22 @@ int main()
             else
                 printf("Ya existe una linea con dicho codigo\n");
             break;
-        case 5:
+        case 4:
             if(Lineas != NULL)
                 ListarLineas(Lineas);
             else
                 printf("No hay lineas que mostrar.");
+            break;
+        case 5:
+                String cod;
+                printf("\nIngrese el codigo de la linea: ");
+                scan(cod);
+                if(Member(Lineas, cod))
+                {
+
+                }
+                else
+                    printf("No existe dicha linea");
             break;
         }
     }

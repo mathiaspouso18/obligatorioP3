@@ -12,6 +12,7 @@ typedef NodoParada * ListaParadas;
 
 void CrearListaParadas (Ciudad origen, Ciudad destino);
 Parada DarParada(Lista l);
-int ObtenerIdListaParadas (ListaParadas l, Parada p);
+int ObtenerIdListaParadas (ListaParadas l);
+int DarUltimoIdParadas(ListaParadas l);
 
 #endif // LISTAPARADAS_H_INCLUDED
