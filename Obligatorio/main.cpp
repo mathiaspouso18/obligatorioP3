@@ -8,6 +8,8 @@ int main()
     int opcion;
     ABB Lineas;
     Linea linea;
+    Grafo G;
+    CrearGrafo(G);
     Diccionario Ciudades;
     Make(Ciudades);
     Make(Lineas);
@@ -43,6 +45,10 @@ int main()
             }
             printf("\nIngese ciudad destino del tramo: ");
             scan(cd);
+            while(streq(co,cd)){
+                printf("\nLa ciudad destino no puede coincidir con el origen del tramo\nPor favor, intente nuevamente : ");
+                scan(cd);
+                }
             if(!Member(Ciudades,cd))
             {
                 encontre = FALSE;
@@ -57,6 +63,7 @@ int main()
             CiudadO = Find(Ciudades,co);
             CiudadD = Find(Ciudades,cd);
             CrearTramo(t,CiudadO,CiudadD);
+            InsertarAristaGrafo(G,t);
             printf("\n\n\n#### Tramo creado con exito ####\n\n\n");
             break;
         case 2:

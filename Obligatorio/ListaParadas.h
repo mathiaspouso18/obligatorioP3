@@ -4,7 +4,8 @@
 
 typedef struct nodoP
 {   Parada info;
-    nodoP * sig;
+    nodoP * prim;
+    nodoP * ult;
 } NodoParada;
 
 typedef NodoParada * ListaParadas;
@@ -16,4 +17,6 @@ int ObtenerIdListaParadas (ListaParadas l);
 int DarUltimoIdParadas(ListaParadas l);
 int DarCantidadParadas(ListaParadas lp);
 void InsBack (ListaParadas &lp, Parada p);
+void Insfront (ListaParadas &lp, Parada p);
+
 #endif // LISTAPARADAS_H_INCLUDED

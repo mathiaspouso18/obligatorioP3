@@ -56,8 +56,10 @@ void DesplegarListaAdy (ListaAdy L){
 
 void CrearGrafo (Grafo &G)
 {
+     ListaAdy l;
+     crearListaAdy(l);
      for (int i=0; i<M; i++){
-        crearListaAdy(G[i]);
+        G[i]= l;
     }
 }
 
@@ -68,6 +70,7 @@ void InsertarAristaGrafo(Grafo &g, Tramo t){
         InsFrontListaAdy (g[IdDestinoTramo(t)],IdOrigenTramo(t));
     }
 }
+
 //Precondición: el vértice pertenece al grafo.
 int gradoVertice(Grafo g, int vertice){
      int cont = LargoListaAdy(g[vertice]);

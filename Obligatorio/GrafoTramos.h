@@ -21,10 +21,9 @@ void DesplegarListaAdy (ListaAdy L);
 
 
 /*** Grafo de Listas de Adyacencia ***/
-void crearGrafo(Grafo &g);
+void CrearGrafo(Grafo &g);
 Boolean PerteneceVerticeGrafo(Grafo g, int vert);
 Boolean PerteneceAristaGrafo (Grafo g, Ciudad ciudad1, Ciudad ciudad2);
-
 //Precondición: la arista no pertenece al grafo.
 void InsertarAristaGrafo(Grafo &g, Tramo t);
 //Precondición: el vértice pertenece al grafo.

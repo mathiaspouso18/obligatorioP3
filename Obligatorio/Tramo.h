@@ -9,6 +9,7 @@ typedef struct {Ciudad origen;
 void CrearTramo(Tramo &t, Ciudad origen, Ciudad destino);
 
 /*** Selectoras ***/
+
 Ciudad DarOrigenTramo(Tramo t);
 Ciudad DarDestinoTramo(Tramo t);
 int IdOrigenTramo(Tramo t);
