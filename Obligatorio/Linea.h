@@ -11,6 +11,8 @@ typedef struct{
 
 void CrearLinea(Linea &l, String codigo, Ciudad orig, Ciudad dest);
 void DarCodigoLinea(Linea l, String &s);
+int UltimoIdParada(Linea l);
 void MostrarLinea(Linea l);
+void InsertParadaEnLista(Linea &linea, Parada p);
 
 #endif // LINEA_H_INCLUDED

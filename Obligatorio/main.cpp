@@ -14,6 +14,7 @@ int main()
     Ciudad CiudadO, CiudadD;
     String codigo, co, cd;
     Tramo t;
+    Parada p;
     Boolean encontre;
 
     printf("****************** Bienvenido al sistema de gestion de transporte ******************\n");
@@ -87,6 +88,7 @@ int main()
                 CiudadD = Find(Ciudades, cd);
                 CrearLinea(linea, codigo, CiudadO, CiudadD);
                 Insert(Lineas, linea);
+                printf("\n#### Linea creada con exito ####\n");
             }
             else
                 printf("Ya existe una linea con dicho codigo\n");
@@ -95,9 +97,30 @@ int main()
             if(Lineas != NULL)
                 ListarLineas(Lineas);
             else
-                printf("No hay lineas que mostrar.");
+                printf("\nNo hay lineas que mostrar.\n");
             break;
         case 5:
+            int ultimoId;
+            printf("\nIngrese codigo de linea: ");
+            scan(codigo);
+            if(Member(Lineas, codigo))
+            {
+                linea = Find(Lineas, codigo);
+                ultimoId = UltimoIdParada(linea);
+                printf("Ingrese ciudad para la parada: ");
+                scan(co);
+                if(Member(Ciudades, co))
+                {
+                    CiudadO = Find(Ciudades, co);
+                    ultimoId++;
+                    CrearParada(p, CiudadO, ultimoId);
+                    InsertParadaEnLista(linea, p);
+                }
+                else
+                    printf("\nNo existe una ciudad con dicho nombre.\n");
+            }
+            else
+                printf("\nNo existe una linea con dicho codigo.\n");
             break;
         case 6:
             break;

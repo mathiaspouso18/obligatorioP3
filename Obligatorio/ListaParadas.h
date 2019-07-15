@@ -10,9 +10,10 @@ typedef struct nodoP
 typedef NodoParada * ListaParadas;
 
 
-void CrearListaParadas (Ciudad origen, Ciudad destino);
+void CrearListaParadas (ListaParadas &lp);
 Parada DarParada(Lista l);
 int ObtenerIdListaParadas (ListaParadas l);
 int DarUltimoIdParadas(ListaParadas l);
-
+int DarCantidadParadas(ListaParadas lp);
+void InsBack (ListaParadas &lp, Parada p);
 #endif // LISTAPARADAS_H_INCLUDED
