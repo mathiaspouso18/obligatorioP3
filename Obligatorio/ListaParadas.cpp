@@ -71,5 +71,13 @@ void DarNombreUltimaParada(ListaParadas listaParadas, String &ciudadParada)
     DarNombreCiudadParada(listaParadas.ult->info, ciudadParada);
 }
 
-
+void MostrarParada(ListaParadas listaParadas)
+{
+    ListaParadas aux = listaParadas;
+    while(aux.prim != NULL)
+    {
+        MostrarDatosParada(aux.prim->info);
+        aux.prim = aux.prim->sig;
+    }
+}
 

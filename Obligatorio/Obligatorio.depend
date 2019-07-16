@@ -98,17 +98,17 @@
 1563296053 source:c:\users\majo\documents\obligatoriop3\obligatorio\abblineas.cpp
 	"ABBLineas.h"
 
-1563296071 c:\users\majo\documents\obligatoriop3\obligatorio\abblineas.h
+1563303545 c:\users\majo\documents\obligatoriop3\obligatorio\abblineas.h
 	"Linea.h"
 	"GrafoTramos.h"
 
-1563301304 c:\users\majo\documents\obligatoriop3\obligatorio\linea.h
+1563302994 c:\users\majo\documents\obligatoriop3\obligatorio\linea.h
 	"ListaParadas.h"
 
-1563301616 c:\users\majo\documents\obligatoriop3\obligatorio\listaparadas.h
+1563303048 c:\users\majo\documents\obligatoriop3\obligatorio\listaparadas.h
 	"Parada.h"
 
-1563301762 c:\users\majo\documents\obligatoriop3\obligatorio\parada.h
+1563303406 c:\users\majo\documents\obligatoriop3\obligatorio\parada.h
 	"DiccionarioCiudades.h"
 
 1563289765 c:\users\majo\documents\obligatoriop3\obligatorio\diccionariociudades.h
@@ -151,7 +151,7 @@
 	"ABBLineas.h"
 	"GrafoTramos.h"
 
-1563301539 source:c:\users\majo\documents\obligatoriop3\obligatorio\linea.cpp
+1563303024 source:c:\users\majo\documents\obligatoriop3\obligatorio\linea.cpp
 	"Linea.h"
 
 1563289765 source:c:\users\majo\documents\obligatoriop3\obligatorio\grafotramos.cpp
@@ -169,7 +169,7 @@
 1563289765 c:\users\majo\documents\obligatoriop3\obligatorio\menu.h
 	<stdio.h>
 
-1563301817 source:c:\users\majo\documents\obligatoriop3\obligatorio\parada.cpp
+1563303935 source:c:\users\majo\documents\obligatoriop3\obligatorio\parada.cpp
 	"Parada.h"
 
 1563289765 source:c:\users\majo\documents\obligatoriop3\obligatorio\string.cpp
@@ -178,10 +178,10 @@
 1563289765 source:c:\users\majo\documents\obligatoriop3\obligatorio\tramo.cpp
 	"Tramo.h"
 
-1563301918 source:c:\users\majo\documents\obligatoriop3\obligatorio\listaparadas.cpp
+1563303193 source:c:\users\majo\documents\obligatoriop3\obligatorio\listaparadas.cpp
 	"ListaParadas.h"
 
-1563302215 source:c:\users\majo\documents\obligatoriop3\obligatorio\main.cpp
+1563302968 source:c:\users\majo\documents\obligatoriop3\obligatorio\main.cpp
 	<iostream>
 	"Empresa.h"
 	"Menu.h"

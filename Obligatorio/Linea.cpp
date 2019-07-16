@@ -56,3 +56,8 @@ Boolean CerroLinea(Linea linea)
 
     return cerro;
 }
+
+void MostrarParadas(Linea linea)
+{
+    MostrarParada(linea.listaParadas);
+}

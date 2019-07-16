@@ -22,5 +22,6 @@ int DarCantidadParadas(ListaParadas lp);
 void InsBack (ListaParadas &lp, Parada p);
 void Insfront (ListaParadas &lp, Parada p);
 void DarNombreUltimaParada(ListaParadas listaParadas, String &ciudadParada);
+void MostrarParada(ListaParadas listaParadas);
 
 #endif // LISTAPARADAS_H_INCLUDED

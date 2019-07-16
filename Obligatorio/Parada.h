@@ -12,5 +12,6 @@ void CrearParada (Parada &p, Ciudad c, int x);
 Ciudad DarCiudadParada(Parada p);
 int DarIDParada(Parada p);
 void DarNombreCiudadParada(Parada p, String &ciudadParada);
+void MostrarDatosParada(Parada p);
 
 #endif // PARADA_H_INCLUDED

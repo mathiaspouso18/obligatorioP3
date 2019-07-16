@@ -157,7 +157,10 @@ int main()
             scan(codigo);
             if(Member(Lineas, codigo))
             {
-
+                if(CantidadParadasEnLista(linea) > 0)
+                    MostrarParadas(linea);
+                else
+                    printf("\nDicha linea no posee paradas.\n");
             }
             else
                 printf("\nNo existe una linea con dicho codigo.\n");

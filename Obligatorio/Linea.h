@@ -17,5 +17,6 @@ void InsertParadaEnLista(Linea &linea, Parada p);
 int CantidadParadasEnLista(Linea linea);
 void DarNombreCiudadOrigen(String &nombre, Linea linea);
 Boolean CerroLinea(Linea linea);
+void MostrarParadas(Linea linea);
 
 #endif // LINEA_H_INCLUDED
