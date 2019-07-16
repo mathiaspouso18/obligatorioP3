@@ -19,5 +19,5 @@ void Insert (ABB &a, Linea l);
 Linea Find(ABB a, String codigo);
 void Delete(ABB &a, int ID);
 void ListarLineas(ABB a);
-
+void Modify(ABB &a, Linea l);
 #endif // ABBLINEAS_H_INCLUDED

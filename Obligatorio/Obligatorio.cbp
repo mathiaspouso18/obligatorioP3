@@ -46,6 +46,8 @@
 		<Unit filename="GrafoTramos.h" />
 		<Unit filename="Linea.cpp" />
 		<Unit filename="Linea.h" />
+		<Unit filename="ListaAdyacencia.cpp" />
+		<Unit filename="ListaAdyacencia.h" />
 		<Unit filename="ListaHash.cpp" />
 		<Unit filename="ListaHash.h" />
 		<Unit filename="ListaParadas.cpp" />

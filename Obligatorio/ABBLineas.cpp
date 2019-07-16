@@ -73,6 +73,29 @@ void Delete(ABB &a, int ID)
 
 }
 
+void Modify(ABB &a, Linea l)
+{
+    Boolean encontre = FALSE;
+    String codigo_linea_abb, codigo;
+    DarCodigoLinea(l, codigo);
+    while(encontre != TRUE && a != NULL)
+    {
+        DarCodigoLinea(a->info, codigo_linea_abb);
+        if(streq(codigo, codigo_linea_abb))
+        {
+            encontre = TRUE;
+            a->info = l;
+        }
+        else
+        {
+            if(!EsMayor(codigo_linea_abb, codigo))
+                a = a->hizq;
+            else
+                a = a->hder;
+        }
+    }
+}
+
 void Insert (ABB &a, Linea l)
 {
     String codigo_linea_abb, codigo_linea;

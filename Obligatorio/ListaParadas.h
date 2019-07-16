@@ -2,21 +2,25 @@
 #define LISTAPARADAS_H_INCLUDED
 #include "Parada.h"
 
-typedef struct nodoP
-{   Parada info;
-    nodoP * prim;
-    nodoP * ult;
-} NodoParada;
+typedef struct NodoPL
+{
+    Parada info;
+    NodoPL * sig;
+}NodoParada;
 
-typedef NodoParada * ListaParadas;
-
+typedef struct
+{
+    NodoParada * prim;
+    NodoParada * ult;
+} ListaParadas;
 
 void CrearListaParadas (ListaParadas &lp);
-Parada DarParada(Lista l);
+Parada DarParada(ListaParadas l);
 int ObtenerIdListaParadas (ListaParadas l);
 int DarUltimoIdParadas(ListaParadas l);
 int DarCantidadParadas(ListaParadas lp);
 void InsBack (ListaParadas &lp, Parada p);
 void Insfront (ListaParadas &lp, Parada p);
+void DarNombreUltimaParada(ListaParadas listaParadas, String &ciudadParada);
 
 #endif // LISTAPARADAS_H_INCLUDED

@@ -14,5 +14,8 @@ void DarCodigoLinea(Linea l, String &s);
 int UltimoIdParada(Linea l);
 void MostrarLinea(Linea l);
 void InsertParadaEnLista(Linea &linea, Parada p);
+int CantidadParadasEnLista(Linea linea);
+void DarNombreCiudadOrigen(String &nombre, Linea linea);
+Boolean CerroLinea(Linea linea);
 
 #endif // LINEA_H_INCLUDED

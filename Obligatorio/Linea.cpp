@@ -34,3 +34,25 @@ void InsertParadaEnLista(Linea &linea, Parada p)
 {
     InsBack(linea.listaParadas, p);
 }
+
+int CantidadParadasEnLista(Linea linea)
+{
+    return DarCantidadParadas(linea.listaParadas);
+}
+
+void DarNombreCiudadOrigen(String &nombre, Linea linea)
+{
+    DarNombreCiudad(linea.ciudOrigen, nombre);
+}
+
+Boolean CerroLinea(Linea linea)
+{
+    Boolean cerro = FALSE;
+    String ciudadDest, ciudadParada;
+    DarNombreUltimaParada(linea.listaParadas, ciudadParada);
+    DarNombreCiudad(linea.ciudDest, ciudadDest);
+    if(streq(ciudadParada, ciudadDest))
+        cerro = TRUE;
+
+    return cerro;
+}

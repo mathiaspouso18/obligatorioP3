@@ -1,64 +1,74 @@
 #include "ListaParadas.h"
 
 /*** Crear lista de paradas ***/
-void CrearListaParadas (ListaParadas &lp){
-    lp = NULL;
+void CrearListaParadas (ListaParadas &lp)
+{
+    lp.prim = NULL;
+    lp.ult = NULL;
 }
 
-void InsBack (ListaParadas &lp, Parada p){
-    nodoP * nuevo = new nodoP;
+void InsBack (ListaParadas &lp, Parada p)
+{
+    NodoParada * nuevo = new NodoParada;
     nuevo->info = p;
-    nuevo->prim = NULL;
-    if (lp->ult == NULL){
-        lp->ult = nuevo;
-        lp->prim = nuevo;
-    }else {
-        lp->ult->prim = nuevo;
-        lp->ult = nuevo;
+    nuevo->sig = NULL;
+    if (lp.ult == NULL)
+    {
+        lp.ult = nuevo;
+        lp.prim = nuevo;
     }
- }
+    else
+    {
+        lp.ult->sig = nuevo;
+        lp.ult = nuevo;
+    }
+}
 
- void Insfront (ListaParadas &lp, Parada p){
-    nodoP * nuevo = new nodoP;
+void Insfront (ListaParadas &lp, Parada p)
+{
+    NodoParada * nuevo = new NodoParada;
     nuevo->info = p;
-    nuevo->prim = lp->prim;
-    lp->prim = nuevo;
-    if (lp->ult == NULL)
-        lp->ult = nuevo;
+    nuevo->sig = lp.prim;
+    lp.prim = nuevo;
+    if (lp.ult == NULL)
+        lp.ult = nuevo;
 }
 
 /*** Selectoras ***/
 
-Parada DarParada(ListaParadas l){
-    return l->info;
+Parada DarParada(ListaParadas l)
+{
+
 }
 
-int ObtenerIdListaParadas (ListaParadas l){
-    return DarIDParada(l->info);
+int ObtenerIdListaParadas (ListaParadas l)
+{
 }
 
-int DarUltimoIdParadas(ListaParadas l){
+int DarUltimoIdParadas(ListaParadas l)
+{
     int id = 0;
-    ListaParadas aux = l;
-    if(aux != NULL)
+    if(l.ult != NULL)
     {
-        while(aux != NULL)
-        {
-            aux = aux->prim;
-        }
-        id = DarIDParada(aux->info);
+        id = DarIDParada(l.ult->info);
     }
     return id;
 }
 
-int DarCantidadParadas(ListaParadas lp){
+int DarCantidadParadas(ListaParadas lp)
+{
     int total = 0;
-    while(lp != NULL)
+    while(lp.prim != NULL)
     {
         total = total + 1;
-        lp = lp->prim;
+        lp.prim = lp.prim->sig;
     }
     return total;
+}
+
+void DarNombreUltimaParada(ListaParadas listaParadas, String &ciudadParada)
+{
+    DarNombreCiudadParada(listaParadas.ult->info, ciudadParada);
 }
 
 

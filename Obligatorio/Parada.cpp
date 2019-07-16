@@ -15,3 +15,8 @@ int DarIDParada(Parada p)
 {
     return p.IdParada;
 }
+
+void DarNombreCiudadParada(Parada p, String &ciudadParada)
+{
+    DarNombreCiudad(p.ParadaCiudad, ciudadParada);
+}

@@ -13,8 +13,8 @@ int main()
     Diccionario Ciudades;
     Make(Ciudades);
     Make(Lineas);
-    Ciudad CiudadO, CiudadD;
-    String codigo, co, cd;
+    Ciudad CiudadO, CiudadD, ciudParada;
+    String codigo, co, cd, origLinea;
     Tramo t;
     Parada p;
     Boolean encontre;
@@ -45,10 +45,11 @@ int main()
             }
             printf("\nIngese ciudad destino del tramo: ");
             scan(cd);
-            while(streq(co,cd)){
+            while(streq(co,cd))
+            {
                 printf("\nLa ciudad destino no puede coincidir con el origen del tramo\nPor favor, intente nuevamente : ");
                 scan(cd);
-                }
+            }
             if(!Member(Ciudades,cd))
             {
                 encontre = FALSE;
@@ -118,20 +119,49 @@ int main()
                 scan(co);
                 if(Member(Ciudades, co))
                 {
-                    CiudadO = Find(Ciudades, co);
-                    ultimoId++;
-                    CrearParada(p, CiudadO, ultimoId);
-                    InsertParadaEnLista(linea, p);
+                    ciudParada = Find(Ciudades, co);
+                    DarNombreCiudadOrigen(origLinea, linea);
+                    if(CantidadParadasEnLista(linea) == 0)
+                    {
+                        if(streq(co, origLinea))
+                        {
+                            ultimoId++;
+                            CrearParada(p, ciudParada, ultimoId);
+                            InsertParadaEnLista(linea, p);
+                        }
+                        else
+                            printf("\nLa primer ciudad debe coincidir con la ciudad de origen.\n");
+                    }
+                    else
+                    {
+                        if(!CerroLinea(linea))
+                        {
+                            ciudParada = Find(Ciudades, co);
+                            ultimoId++;
+                            CrearParada(p, ciudParada, ultimoId);
+                            InsertParadaEnLista(linea, p);
+                        }
+                        else
+                            printf("\nYa se ingreso el destino, no puede ingresar mas paradas.\n");
+                    }
                 }
                 else
                     printf("\nNo existe una ciudad con dicho nombre.\n");
             }
             else
                 printf("\nNo existe una linea con dicho codigo.\n");
+            Modify(Lineas, linea);
             break;
         case 6:
-            break;
+            printf("\nIngrese codigo de linea: ");
+            scan(codigo);
+            if(Member(Lineas, codigo))
+            {
 
+            }
+            else
+                printf("\nNo existe una linea con dicho codigo.\n");
+            break;
         }
     }
     while(opcion != 0);
