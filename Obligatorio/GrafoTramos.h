@@ -12,7 +12,6 @@ Boolean PerteneceAristaGrafo (Grafo g, Ciudad ciudad1, Ciudad ciudad2);
 void InsertarAristaGrafo(Grafo &g, Tramo t);
 //Precondición: el vértice pertenece al grafo.
 int gradoVertice(Grafo g, int vertice);
-
 void DFS(Grafo G, int actual, int v, Boolean visitado[M], Boolean &Existe);
 Boolean ExisteTramoEntreCiudades(Grafo G, int u, int v, Boolean &Existe);
 

@@ -64,8 +64,14 @@ int main()
             CiudadO = Find(Ciudades,co);
             CiudadD = Find(Ciudades,cd);
             CrearTramo(t,CiudadO,CiudadD);
+            Boolean Existe;
+            ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), Existe);
+            if(!Existe){
             InsertarAristaGrafo(G,t);
-            printf("\n\n\n#### Tramo creado con exito ####\n\n\n");
+                printf("\n\n\n#### Tramo creado con exito ####\n\n\n");
+            }else{
+              printf("\n\n\n#### El tramo creado ya existe ####\n\n\n");
+            }
             break;
         case 2:
             break;
