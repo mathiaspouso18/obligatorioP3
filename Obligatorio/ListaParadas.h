@@ -23,5 +23,6 @@ void InsBack (ListaParadas &lp, Parada p);
 void Insfront (ListaParadas &lp, Parada p);
 void DarNombreUltimaParada(ListaParadas listaParadas, String &ciudadParada);
 void MostrarParada(ListaParadas listaParadas);
+int DarIdUltimaCiudad(ListaParadas l);
 
 #endif // LISTAPARADAS_H_INCLUDED

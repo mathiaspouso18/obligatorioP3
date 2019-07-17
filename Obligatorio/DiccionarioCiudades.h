@@ -3,7 +3,7 @@
 #include "ListaHash.h"
 
 const int B = 5;
-typedef Lista Diccionario[B];
+typedef ListaHash Diccionario[B];
 
 void Make(Diccionario &d);
 Boolean Member(Diccionario d, String clave);

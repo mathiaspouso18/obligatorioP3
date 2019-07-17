@@ -5,9 +5,9 @@ void MostrarLinea(Linea l)
     printf("\n\t- Linea: ");
     print(l.codigo);
     printf(" | Ciudad de Origen: ");
-    MostrarNombre(l.ciudOrigen);
+    MostrarNombreCiudad(l.ciudOrigen);
     printf(" | Ciudad de Destino: ");
-    MostrarNombre(l.ciudDest);
+    MostrarNombreCiudad(l.ciudDest);
     printf(" | Cantidad de paradas: %d", DarCantidadParadas(l.listaParadas));
     printf("\n");
 }
@@ -60,4 +60,9 @@ Boolean CerroLinea(Linea linea)
 void MostrarParadas(Linea linea)
 {
     MostrarParada(linea.listaParadas);
+}
+
+int DarIdUltimaCiudadLinea(Linea linea)
+{
+    DarIdUltimaCiudad(linea.listaParadas);
 }

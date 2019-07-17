@@ -1,14 +1,14 @@
 #include "ListaHash.h"
 
-void CrearLista (Lista &L)
+void CrearLista (ListaHash &L)
 {
     L = NULL;
 }
 
-Boolean PerteneceLista(Lista L, String clave)
+Boolean PerteneceLista(ListaHash L, String clave)
 {
     Boolean pertenece = FALSE;
-    Lista aux = L;
+    ListaHash aux = L;
     String nombreAux;
     while(aux != NULL && !pertenece)
     {
@@ -22,29 +22,29 @@ Boolean PerteneceLista(Lista L, String clave)
     return pertenece;
 }
 
-Ciudad DarCiudadLista(Lista L)
+Ciudad DarCiudadLista(ListaHash L)
 {
     return L->info;
 }
 
-void InsFrontLista(Lista &L, Ciudad c)
+void InsFrontListaHash(ListaHash &L, Ciudad c)
 {
-    Lista aux = new Nodo;
+    ListaHash aux = new Nodo;
     aux -> info = c;
 	aux -> sig = L;
 	L = aux;
 }
 
-int ObtenerEnLista(Lista L, String clave)
+int ObtenerEnLista(ListaHash L, String clave)
 {
 }
 
-void BorrarEnLista(Lista &L, String clave)
+void BorrarEnLista(ListaHash &L, String clave)
 {
 
 }
 
-void DarNombreLista(Lista l, String &nombre)
+void DarNombreLista(ListaHash l, String &nombre)
 {
     DarNombreCiudad(l->info, nombre);
 }

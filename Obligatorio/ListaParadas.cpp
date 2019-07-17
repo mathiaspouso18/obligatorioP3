@@ -36,9 +36,10 @@ void Insfront (ListaParadas &lp, Parada p)
 
 /*** Selectoras ***/
 
-Parada DarParada(ListaParadas l)
+int DarIdUltimaCiudad(ListaParadas l)
 {
-
+    Ciudad c = DarCiudadParada(l.ult->info);
+    return DarIDCiudad(c);
 }
 
 int ObtenerIdListaParadas (ListaParadas l)

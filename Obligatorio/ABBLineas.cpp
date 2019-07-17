@@ -1,11 +1,11 @@
 #include "ABBLineas.h"
 
-void Make(ABB &a)
+void Make(ABBLineas &a)
 {
     a = NULL;
 }
 
-Boolean Vacio (ABB a)
+Boolean Vacio (ABBLineas a)
 {
     Boolean es = TRUE;
     if(a != NULL)
@@ -14,7 +14,7 @@ Boolean Vacio (ABB a)
     return es;
 }
 
-Linea Find(ABB a, String codigo)
+Linea Find(ABBLineas a, String codigo)
 {
     Linea l;
 	Boolean seguir = TRUE;
@@ -45,7 +45,7 @@ Linea Find(ABB a, String codigo)
 	return l;
 }
 
-Boolean Member(ABB a, String codigo)
+Boolean Member(ABBLineas a, String codigo)
 {
     Boolean existe = FALSE;
     String codigo_linea_abb;
@@ -68,12 +68,12 @@ Boolean Member(ABB a, String codigo)
     return existe;
 }
 
-void Delete(ABB &a, int ID)
+void Delete(ABBLineas &a, int ID)
 {
 
 }
 
-void Modify(ABB &a, Linea l)
+void Modify(ABBLineas &a, Linea l)
 {
     Boolean encontre = FALSE;
     String codigo_linea_abb, codigo;
@@ -96,7 +96,7 @@ void Modify(ABB &a, Linea l)
     }
 }
 
-void Insert (ABB &a, Linea l)
+void Insert (ABBLineas &a, Linea l)
 {
     String codigo_linea_abb, codigo_linea;
     DarCodigoLinea(l, codigo_linea);
@@ -117,7 +117,7 @@ void Insert (ABB &a, Linea l)
     }
 }
 
-void ListarLineas(ABB a)
+void ListarLineas(ABBLineas a)
 {
     if (a != NULL)
     {

@@ -10,14 +10,14 @@ typedef struct nodoA
     nodoA * hizq;
     nodoA * hder;
 } NodoABB;
-typedef NodoABB * ABB;
+typedef NodoABB * ABBLineas;
 
-void Make(ABB &a);
-Boolean Vacio (ABB a);
-Boolean Member(ABB a, String codigo);
-void Insert (ABB &a, Linea l);
-Linea Find(ABB a, String codigo);
-void Delete(ABB &a, int ID);
-void ListarLineas(ABB a);
-void Modify(ABB &a, Linea l);
+void Make(ABBLineas &a);
+Boolean Vacio (ABBLineas a);
+Boolean Member(ABBLineas a, String codigo);
+void Insert (ABBLineas &a, Linea l);
+Linea Find(ABBLineas a, String codigo);
+void Delete(ABBLineas &a, int ID);
+void ListarLineas(ABBLineas a);
+void Modify(ABBLineas &a, Linea l);
 #endif // ABBLINEAS_H_INCLUDED

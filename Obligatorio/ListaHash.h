@@ -8,13 +8,13 @@ typedef struct nodoL
     nodoL * sig;
 } Nodo;
 
-typedef Nodo * Lista;
+typedef Nodo * ListaHash;
 
-void CrearLista (Lista &L);
-void InsFrontLista(Lista &L, Ciudad c);
-Boolean PerteneceLista(Lista L, String clave);
-Ciudad DarCiudadLista(Lista L);
-int ObtenerEnLista(Lista L, String clave);
-void BorrarEnLista(Lista &L, String clave);
-void DarNombreLista(Lista l, String &nombre);
+void CrearLista (ListaHash &L);
+void InsFrontListaHash(ListaHash &L, Ciudad c);
+Boolean PerteneceLista(ListaHash L, String clave);
+Ciudad DarCiudadLista(ListaHash L);
+int ObtenerEnLista(ListaHash L, String clave);
+void BorrarEnLista(ListaHash &L, String clave);
+void DarNombreLista(ListaHash l, String &nombre);
 #endif // LISTA_H_INCLUDED

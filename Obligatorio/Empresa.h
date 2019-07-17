@@ -4,7 +4,7 @@
 #include "GrafoTramos.h"
 
 typedef struct {
-    ABB Lineas;
+    ABBLineas Lineas;
     Diccionario diccCiudades;
 }Empresa;
 

@@ -10,7 +10,7 @@ Boolean Member(Diccionario d, String clave)
 {
     Boolean pertenece = FALSE;
     int cubeta = h(clave);
-    Lista aux = d[cubeta];
+    ListaHash aux = d[cubeta];
     while(!pertenece && aux != NULL)
     {
         String nombreCiu;
@@ -27,7 +27,7 @@ Ciudad Find(Diccionario d, String nombre)
 {
     int cubeta = h(nombre);
     Boolean esta = FALSE;
-    Lista aux = d[cubeta];
+    ListaHash aux = d[cubeta];
     while(!esta && aux != NULL)
     {
         String nombreCiu;
@@ -46,7 +46,7 @@ void InsertDiccionario(Diccionario &d, Ciudad c)
     String n;
     DarNombreCiudad(c, n);
     int cubeta = h(n);
-    InsFrontLista(d[cubeta], c);
+    InsFrontListaHash(d[cubeta], c);
 }
 
 int h(String clave)
@@ -75,5 +75,5 @@ void CargarDiccionarioCiudades (Diccionario &d){
         CrearCiudad(c,s,i+1);
         InsertDiccionario(d,c);
     }
-    printf("\n\n\n\n\n");
+    printf("\n");
 }

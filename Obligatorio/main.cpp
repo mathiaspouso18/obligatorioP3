@@ -6,18 +6,18 @@ using namespace std;
 int main()
 {
     int opcion;
-    ABB Lineas;
+    ABBLineas Lineas;
     Linea linea;
     Grafo G;
-    CrearGrafo(G);
-    Diccionario Ciudades;
-    Make(Ciudades);
-    Make(Lineas);
     Ciudad CiudadO, CiudadD, ciudParada;
     String codigo, co, cd, origLinea;
     Tramo t;
     Parada p;
     Boolean encontre;
+    CrearGrafo(G);
+    Diccionario Ciudades;
+    Make(Ciudades);
+    Make(Lineas);
 
     printf("****************** Bienvenido al sistema de gestion de transporte ******************\n");
     CargarDiccionarioCiudades(Ciudades);
@@ -29,15 +29,15 @@ int main()
         switch(opcion)
         {
         case 1:
-            printf("\n\n\tCrear un nuevo tramo\n");
-            printf("\nIngese ciudad origen del tramo: ");
+            printf("Crear un nuevo tramo\n");
+            printf("Ingese ciudad origen del tramo: ");
             scan(co);
             if(!Member(Ciudades,co))
             {
                 encontre = FALSE;
                 while(!encontre)
                 {
-                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    printf("\nLa ciudad ingresada no esta en el recorrido; Por favor intente nuevamente :");
                     scan(co);
                     if(Member(Ciudades,co))
                         encontre = TRUE;
@@ -47,7 +47,7 @@ int main()
             scan(cd);
             while(streq(co,cd))
             {
-                printf("\nLa ciudad destino no puede coincidir con el origen del tramo\nPor favor, intente nuevamente : ");
+                printf("\nLa ciudad destino no puede coincidir con el origen del tramo; Por favor, intente nuevamente : ");
                 scan(cd);
             }
             if(!Member(Ciudades,cd))
@@ -55,7 +55,7 @@ int main()
                 encontre = FALSE;
                 while(!encontre)
                 {
-                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    printf("\nLa ciudad ingresada no esta en el recorrido; Por favor intente nuevamente :");
                     scan(cd);
                     if(Member(Ciudades,cd))
                         encontre = TRUE;
@@ -65,10 +65,13 @@ int main()
             CiudadD = Find(Ciudades,cd);
             CrearTramo(t,CiudadO,CiudadD);
             ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
-            if(!encontre){
-            InsertarAristaGrafo(G,t);
+            if(!encontre)
+            {
+                InsertarAristaGrafo(G,t);
                 printf("\n\n\n#### Tramo creado con exito ####\n\n\n");
-            }else{
+            }
+            else
+            {
                 printf("\n\n\n#### El tramo creado ya existe ####\n\n\n");
             }
             break;
@@ -109,9 +112,12 @@ int main()
             CiudadD = Find(Ciudades,cd);
             CrearTramo(t,CiudadO,CiudadD);
             ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
-            if(!encontre){
+            if(!encontre)
+            {
                 printf("\n\n\n#### El tramo no esta en los recorridos de la empresa ####\n\n\n");
-            }else{
+            }
+            else
+            {
                 printf("\n\n\n#### El tramo se encuentra actualmente en los recorridos de la empresa ####\n\n\n");
             }
             break;
@@ -174,6 +180,8 @@ int main()
                             ultimoId++;
                             CrearParada(p, ciudParada, ultimoId);
                             InsertParadaEnLista(linea, p);
+                            Modify(Lineas, linea);
+                            printf("\n#### Parada agregada con exito ####\n");
                         }
                         else
                             printf("\nLa primer ciudad debe coincidir con la ciudad de origen.\n");
@@ -183,9 +191,17 @@ int main()
                         if(!CerroLinea(linea))
                         {
                             ciudParada = Find(Ciudades, co);
-                            ultimoId++;
-                            CrearParada(p, ciudParada, ultimoId);
-                            InsertParadaEnLista(linea, p);
+                            ExisteTramoEntreCiudades(G, DarIdUltimaCiudadLinea(linea), DarIDCiudad(ciudParada), encontre);
+                            if(encontre)
+                            {
+                                ultimoId++;
+                                CrearParada(p, ciudParada, ultimoId);
+                                InsertParadaEnLista(linea, p);
+                                Modify(Lineas, linea);
+                                printf("\n#### Parada agregada con exito ####\n");
+                            }
+                            else
+                                printf("\nNo se puede ingresar esa parada ya que no existe un tramo entre la ultima parada y la nueva.\n");
                         }
                         else
                             printf("\nYa se ingreso el destino, no puede ingresar mas paradas.\n");
@@ -196,7 +212,6 @@ int main()
             }
             else
                 printf("\nNo existe una linea con dicho codigo.\n");
-            Modify(Lineas, linea);
             break;
         case 6:
             printf("\nIngrese codigo de linea: ");
