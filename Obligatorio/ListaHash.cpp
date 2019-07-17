@@ -35,15 +35,6 @@ void InsFrontListaHash(ListaHash &L, Ciudad c)
 	L = aux;
 }
 
-int ObtenerEnLista(ListaHash L, String clave)
-{
-}
-
-void BorrarEnLista(ListaHash &L, String clave)
-{
-
-}
-
 void DarNombreLista(ListaHash l, String &nombre)
 {
     DarNombreCiudad(l->info, nombre);

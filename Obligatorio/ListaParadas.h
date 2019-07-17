@@ -16,7 +16,6 @@ typedef struct
 
 void CrearListaParadas (ListaParadas &lp);
 Parada DarParada(ListaParadas l);
-int ObtenerIdListaParadas (ListaParadas l);
 int DarUltimoIdParadas(ListaParadas l);
 int DarCantidadParadas(ListaParadas lp);
 void InsBack (ListaParadas &lp, Parada p);

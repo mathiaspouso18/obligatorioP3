@@ -42,10 +42,6 @@ int DarIdUltimaCiudad(ListaParadas l)
     return DarIDCiudad(c);
 }
 
-int ObtenerIdListaParadas (ListaParadas l)
-{
-}
-
 int DarUltimoIdParadas(ListaParadas l)
 {
     int id = 0;

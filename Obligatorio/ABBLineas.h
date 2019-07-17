@@ -17,7 +17,6 @@ Boolean Vacio (ABBLineas a);
 Boolean Member(ABBLineas a, String codigo);
 void Insert (ABBLineas &a, Linea l);
 Linea Find(ABBLineas a, String codigo);
-void Delete(ABBLineas &a, int ID);
 void ListarLineas(ABBLineas a);
 void Modify(ABBLineas &a, Linea l);
 #endif // ABBLINEAS_H_INCLUDED

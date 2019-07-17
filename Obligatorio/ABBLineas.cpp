@@ -17,10 +17,10 @@ Boolean Vacio (ABBLineas a)
 Linea Find(ABBLineas a, String codigo)
 {
     Linea l;
-	Boolean seguir = TRUE;
-	String codigo_linea_abb;
+    Boolean seguir = TRUE;
+    String codigo_linea_abb;
 
-	while(seguir)
+    while(seguir)
     {
         if(a == NULL)
         {
@@ -29,7 +29,8 @@ Linea Find(ABBLineas a, String codigo)
         else
         {
             DarCodigoLinea(a->info, codigo_linea_abb);
-            if(streq(codigo, codigo_linea_abb)){
+            if(streq(codigo, codigo_linea_abb))
+            {
                 l = a->info;
                 seguir = FALSE;
             }
@@ -41,8 +42,8 @@ Linea Find(ABBLineas a, String codigo)
                     a = a->hder;
             }
         }
-	}
-	return l;
+    }
+    return l;
 }
 
 Boolean Member(ABBLineas a, String codigo)
@@ -68,31 +69,21 @@ Boolean Member(ABBLineas a, String codigo)
     return existe;
 }
 
-void Delete(ABBLineas &a, int ID)
-{
-
-}
-
 void Modify(ABBLineas &a, Linea l)
 {
-    Boolean encontre = FALSE;
     String codigo_linea_abb, codigo;
     DarCodigoLinea(l, codigo);
-    while(encontre != TRUE && a != NULL)
+    DarCodigoLinea(a->info, codigo_linea_abb);
+
+    if (streq(codigo, codigo_linea_abb))
+        a -> info = l;
+    else
     {
-        DarCodigoLinea(a->info, codigo_linea_abb);
-        if(streq(codigo, codigo_linea_abb))
-        {
-            encontre = TRUE;
-            a->info = l;
-        }
+        if(!EsMayor(codigo_linea_abb, codigo))
+            Modify (a -> hizq, l);
         else
-        {
-            if(!EsMayor(codigo_linea_abb, codigo))
-                a = a->hizq;
-            else
-                a = a->hder;
-        }
+            Modify (a -> hder, l);
+
     }
 }
 
