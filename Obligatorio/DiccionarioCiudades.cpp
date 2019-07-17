@@ -75,4 +75,5 @@ void CargarDiccionarioCiudades (Diccionario &d){
         CrearCiudad(c,s,i+1);
         InsertDiccionario(d,c);
     }
+    printf("\n\n\n\n\n");
 }

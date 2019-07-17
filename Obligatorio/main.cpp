@@ -64,16 +64,56 @@ int main()
             CiudadO = Find(Ciudades,co);
             CiudadD = Find(Ciudades,cd);
             CrearTramo(t,CiudadO,CiudadD);
-            Boolean Existe;
-            ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), Existe);
-            if(!Existe){
+            ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
+            if(!encontre){
             InsertarAristaGrafo(G,t);
                 printf("\n\n\n#### Tramo creado con exito ####\n\n\n");
             }else{
-              printf("\n\n\n#### El tramo creado ya existe ####\n\n\n");
+                printf("\n\n\n#### El tramo creado ya existe ####\n\n\n");
             }
             break;
         case 2:
+            //comprobar secuencia de tramos
+            printf("\nIngese ciudad origen del tramo: ");
+            scan(co);
+            if(!Member(Ciudades,co))
+            {
+                encontre = FALSE;
+                while(!encontre)
+                {
+                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    scan(co);
+                    if(Member(Ciudades,co))
+                        encontre = TRUE;
+                }
+            }
+            printf("\nIngese ciudad destino del tramo: ");
+            scan(cd);
+            while(streq(co,cd))
+            {
+                printf("\nLa ciudad destino no puede coincidir con el origen del tramo\nPor favor, intente nuevamente : ");
+                scan(cd);
+            }
+            if(!Member(Ciudades,cd))
+            {
+                encontre = FALSE;
+                while(!encontre)
+                {
+                    printf("\nLa ciudad ingresada no esta en el recorrido\nPor favor intente nuevamente :");
+                    scan(cd);
+                    if(Member(Ciudades,cd))
+                        encontre = TRUE;
+                }
+            }
+            CiudadO = Find(Ciudades,co);
+            CiudadD = Find(Ciudades,cd);
+            CrearTramo(t,CiudadO,CiudadD);
+            ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
+            if(!encontre){
+                printf("\n\n\n#### El tramo no esta en los recorridos de la empresa ####\n\n\n");
+            }else{
+                printf("\n\n\n#### El tramo se encuentra actualmente en los recorridos de la empresa ####\n\n\n");
+            }
             break;
         case 3:
             printf("\nIngrese codigo de linea: ");
