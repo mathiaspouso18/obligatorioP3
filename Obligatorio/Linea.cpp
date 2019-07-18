@@ -66,3 +66,7 @@ int DarIdUltimaCiudadLinea(Linea linea)
 {
     DarIdUltimaCiudad(linea.listaParadas);
 }
+
+ListaParadas DarListaParadasLinea (Linea linea){
+     return linea.listaParadas;
+}

@@ -216,22 +216,18 @@ int main()
             printf("###         Ingrese el codigo de la linea            ###\n\t");
             printf("###                                                  ###\n\t\t");
             scan(codigo);
-            if(Member(Lineas, codigo))
-            {
+            if(Member(Lineas, codigo)){
                 linea = Find(Lineas, codigo);
                 ultimoId = UltimoIdParada(linea);
                 printf("\n\t###                                                  ###\n\t");
                 printf("###       Ingese una ciudad para agregar parada      ###\n\t");
                 printf("###                                                  ###\n\t\t");
                 scan(co);
-                if(Member(Ciudades, co))
-                {
+                if(Member(Ciudades, co)){
                     ciudParada = Find(Ciudades, co);
                     DarNombreCiudadOrigen(origLinea, linea);
-                    if(CantidadParadasEnLista(linea) == 0)
-                    {
-                        if(streq(co, origLinea))
-                        {
+                    if(CantidadParadasEnLista(linea) == 0){
+                        if(streq(co, origLinea)){
                             ultimoId++;
                             CrearParada(p, ciudParada, ultimoId);
                             InsertParadaEnLista(linea, p);
@@ -241,16 +237,26 @@ int main()
                             printf("###            Parada agregada con exito             ###\n\t");
                             printf("###                                                  ###\n\t");
                             printf("########################################################\n\n");
-                        }else
+                        }else{
                           printf("\t\n\t########################################################");
                           printf("\n\t###                                                  ###\n\t");
                           printf("### La primer parada debe coincidir con la ciudad    ###\n\t");
                           printf("### origen del recorrido.                            ###\n\t");
                           printf("###                                                  ###\n\t");
                           printf("########################################################\n\n");
-                    }else{
+                        }
+                    } else {
                         if(!CerroLinea(linea)){
                             ciudParada = Find(Ciudades, co);
+                            if(BuscarCiudadEnParadas(DarListaParadasLinea(linea),ciudParada))
+                            {
+                                printf("\t\n\t########################################################");
+                                printf("\n\t###                                                  ###\n\t");
+                                printf("###   La parada ingresada ya pertenece a la linea    ###\n\t");
+                                printf("###                                                  ###\n\t");
+                                printf("########################################################\n\n");
+                                break;
+                            }
                             ExisteTramoEntreCiudades(G, DarIdUltimaCiudadLinea(linea), DarIDCiudad(ciudParada), encontre);
                             if(encontre){
                                 ultimoId++;
