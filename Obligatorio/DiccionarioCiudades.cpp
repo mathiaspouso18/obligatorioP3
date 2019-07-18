@@ -55,7 +55,7 @@ int h(String clave)
 }
 
 void CargarDiccionarioCiudades (Diccionario &d){
-    printf("\nAntes de continuar, ingrese las ciudades que la empresa visita (Esto podra hacerlo solo una vez)\n");
+    printf("\nAntes de continuar, ingrese las ciudades que la empresa visita \n(Esto podra hacerlo solo una vez)\n");
     for(int i = 0; i<B; i++){
         printf("\nIngrese la ciudad %d: ", i+1);
         String s;
