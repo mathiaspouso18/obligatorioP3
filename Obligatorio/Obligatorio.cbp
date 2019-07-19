@@ -40,8 +40,6 @@
 		<Unit filename="Ciudad.h" />
 		<Unit filename="DiccionarioCiudades.cpp" />
 		<Unit filename="DiccionarioCiudades.h" />
-		<Unit filename="Empresa.cpp" />
-		<Unit filename="Empresa.h" />
 		<Unit filename="GrafoTramos.cpp" />
 		<Unit filename="GrafoTramos.h" />
 		<Unit filename="Linea.cpp" />

@@ -9,7 +9,7 @@ void MostrarLinea(Linea l)
     printf(" | Ciudad de Destino: ");
     MostrarNombreCiudad(l.ciudDest);
     printf(" | Cantidad de paradas: %d", DarCantidadParadas(l.listaParadas));
-    printf("\n");
+    printf("\n\n");
 }
 
 void CrearLinea(Linea &l, String codigo, Ciudad orig, Ciudad dest)

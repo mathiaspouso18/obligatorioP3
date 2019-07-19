@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Empresa.h"
+#include "ABBLineas.h"
+#include "GrafoTramos.h"
 #include "Menu.h"
 using namespace std;
 
@@ -37,36 +38,40 @@ int main()
             scan(co);
             if(!Member(Ciudades,co))
             {
-             encontre = FALSE;
-             while(!encontre){
-              printf("\t###                                                  ###\n");
-              printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
-              printf("###   Por favor, intente nuevamente                  ###\n\t\t");
-              scan(co);
-              if(Member(Ciudades,co))
-               encontre = TRUE;
-              }
+                encontre = FALSE;
+                while(!encontre)
+                {
+                    printf("\t###                                                  ###\n");
+                    printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
+                    printf("###   Por favor, intente nuevamente                  ###\n\t\t");
+                    scan(co);
+                    if(Member(Ciudades,co))
+                        encontre = TRUE;
+                }
             }
             printf("\n\t###                                                  ###\n\t");
             printf("###       Ingese ciudad destino del tramo:           ###\n\t");
             printf("###                                                  ###\n\t\t");
             scan(cd);
-            while(streq(co,cd)){
-             printf("\n\t###                                                  ###\n\t");
-             printf("### La ciudad destino no puede coincidir con el      ###\n\t");
-             printf("### origen del tramo, por favor, intente nuevamente  ###\n\t\t");
-             scan(cd);
-            }
-            if(!Member(Ciudades,cd)){
-              encontre = FALSE;
-              while(!encontre){
-                printf("\t###                                                  ###\n");
-                printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
-                printf("###   Por favor, intente nuevamente                  ###\n\t\t");
+            while(streq(co,cd))
+            {
+                printf("\n\t###                                                  ###\n\t");
+                printf("### La ciudad destino no puede coincidir con el      ###\n\t");
+                printf("### origen del tramo, por favor, intente nuevamente  ###\n\t\t");
                 scan(cd);
-                if(Member(Ciudades,cd))
-                   encontre = TRUE;
-              }
+            }
+            if(!Member(Ciudades,cd))
+            {
+                encontre = FALSE;
+                while(!encontre)
+                {
+                    printf("\t###                                                  ###\n");
+                    printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
+                    printf("###   Por favor, intente nuevamente                  ###\n\t\t");
+                    scan(cd);
+                    if(Member(Ciudades,cd))
+                        encontre = TRUE;
+                }
             }
             CiudadO = Find(Ciudades,co);
             CiudadD = Find(Ciudades,cd);
@@ -74,20 +79,21 @@ int main()
             ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
             if(!encontre)
             {
-              InsertarAristaGrafo(G,t);
-              printf("\t\n\t########################################################");
-              printf("\n\t###                                                  ###\n\t");
-              printf("###            Tramo creado con exito                ###\n\t");
-              printf("###                                                  ###\n\t");
-              printf("########################################################\n\n");
+                InsertarAristaGrafo(G,t);
+                printf("\t\n\t########################################################");
+                printf("\n\t###                                                  ###\n\t");
+                printf("###            Tramo creado con exito                ###\n\t");
+                printf("###                                                  ###\n\t");
+                printf("########################################################\n\n");
             }
             else
             {
-              printf("\t\n\t########################################################");
-              printf("\n\t###                                                  ###\n\t");
-              printf("###         El Tramo creado ya existe                ###\n\t");
-              printf("###                                                  ###\n\t");
-              printf("########################################################\n\n");            }
+                printf("\t\n\t########################################################");
+                printf("\n\t###                                                  ###\n\t");
+                printf("###         El Tramo creado ya existe                ###\n\t");
+                printf("###                                                  ###\n\t");
+                printf("########################################################\n\n");
+            }
             break;
         case 2: /*** Comprobar si existe un tramo entre 2 ciudades ***/
             printf("\t\n\t########################################################");
@@ -99,56 +105,63 @@ int main()
             scan(co);
             if(!Member(Ciudades,co))
             {
-              encontre = FALSE;
-              while(!encontre){
-                printf("\t###                                                  ###\n");
-                printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
-                printf("###   Por favor, intente nuevamente                  ###\n\t\t");
-                scan(co);
-                if(Member(Ciudades,co))
+                encontre = FALSE;
+                while(!encontre)
+                {
+                    printf("\t###                                                  ###\n");
+                    printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
+                    printf("###   Por favor, intente nuevamente                  ###\n\t\t");
+                    scan(co);
+                    if(Member(Ciudades,co))
                         encontre = TRUE;
-              }
+                }
             }
             printf("\n\t###                                                  ###\n\t");
             printf("###       Ingese ciudad destino del tramo:           ###\n\t");
             printf("###                                                  ###\n\t\t");
             scan(cd);
-            while(streq(co,cd)){
-              printf("\t###                                                  ###\n");
-              printf("\t###   La ciudad destino no puede coincidir con el    ###\n\t");
-              printf("###  origen del tramo, por favor intente nuevamente. ###\n\t\t");
-              scan(cd);
+            while(streq(co,cd))
+            {
+                printf("\t###                                                  ###\n");
+                printf("\t###   La ciudad destino no puede coincidir con el    ###\n\t");
+                printf("###  origen del tramo, por favor intente nuevamente. ###\n\t\t");
+                scan(cd);
             }
-            if(!Member(Ciudades,cd)){
-              encontre = FALSE;
-              while(!encontre){
-              printf("\t###                                                  ###\n");
-              printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
-              printf("###   Por favor, intente nuevamente                  ###\n\t\t");
-              scan(cd);
-              if(Member(Ciudades,cd))
-                encontre = TRUE;
-              }
-             }
+            if(!Member(Ciudades,cd))
+            {
+                encontre = FALSE;
+                while(!encontre)
+                {
+                    printf("\t###                                                  ###\n");
+                    printf("\t###   La ciudad ingresada no esta en el recorrido.   ###\n\t");
+                    printf("###   Por favor, intente nuevamente                  ###\n\t\t");
+                    scan(cd);
+                    if(Member(Ciudades,cd))
+                        encontre = TRUE;
+                }
+            }
             CiudadO = Find(Ciudades,co);
             CiudadD = Find(Ciudades,cd);
             CrearTramo(t,CiudadO,CiudadD);
             ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
-            if(!encontre){
-              printf("\t\n\t########################################################");
-              printf("\n\t###                                                  ###\n\t");
-              printf("###    El tramo no se encuentra dentro de los        ###\n\t");
-              printf("###    recorridos de la empresa.                     ###\n\t");
-              printf("###                                                  ###\n\t");
-              printf("########################################################\n\n");
-            } else {
-              printf("\t\n\t########################################################");
-              printf("\n\t###                                                  ###\n\t");
-              printf("###    El tramo se encuentra dentro de los           ###\n\t");
-              printf("###    recorridos de la empresa.                     ###\n\t");
-              printf("###                                                  ###\n\t");
-              printf("########################################################\n\n");
-              }
+            if(!encontre)
+            {
+                printf("\t\n\t########################################################");
+                printf("\n\t###                                                  ###\n\t");
+                printf("###    El tramo no se encuentra dentro de los        ###\n\t");
+                printf("###    recorridos de la empresa.                     ###\n\t");
+                printf("###                                                  ###\n\t");
+                printf("########################################################\n\n");
+            }
+            else
+            {
+                printf("\t\n\t########################################################");
+                printf("\n\t###                                                  ###\n\t");
+                printf("###    El tramo se encuentra dentro de los           ###\n\t");
+                printf("###    recorridos de la empresa.                     ###\n\t");
+                printf("###                                                  ###\n\t");
+                printf("########################################################\n\n");
+            }
             break;
         case 3:
             printf("\t\n\t########################################################");
@@ -189,26 +202,29 @@ int main()
                 printf("\n\t###                                                  ###\n\t");
                 printf("###            Linea creada con exito                ###\n\t");
                 printf("###                                                  ###\n\t");
-                printf("########################################################\n\n");            }
-            else{
-              printf("\t\n\t########################################################");
-              printf("\n\t###                                                  ###\n\t");
-              printf("###         Ya existe una linea con ese codigo       ###\n\t");
-              printf("###                                                  ###\n\t");
-              printf("########################################################\n\n");
-              }
-              break;
+                printf("########################################################\n\n");
+            }
+            else
+            {
+                printf("\t\n\t########################################################");
+                printf("\n\t###                                                  ###\n\t");
+                printf("###         Ya existe una linea con ese codigo       ###\n\t");
+                printf("###                                                  ###\n\t");
+                printf("########################################################\n\n");
+            }
+            break;
         case 4:
             if(Lineas != NULL)
                 ListarLineas(Lineas);
-            else{
-              printf("\t\n\t########################################################");
-              printf("\n\t###                                                  ###\n\t");
-              printf("###        No existen lineas para listar             ###\n\t");
-              printf("###                                                  ###\n\t");
-              printf("########################################################\n\n");
-              }
-              break;
+            else
+            {
+                printf("\t\n\t########################################################");
+                printf("\n\t###                                                  ###\n\t");
+                printf("###        No existen lineas para listar             ###\n\t");
+                printf("###                                                  ###\n\t");
+                printf("########################################################\n\n");
+            }
+            break;
         case 5: /*** Agregar parada a la linea ***/
             int ultimoId;
             printf("\t\n\t########################################################");
@@ -216,18 +232,22 @@ int main()
             printf("###         Ingrese el codigo de la linea            ###\n\t");
             printf("###                                                  ###\n\t\t");
             scan(codigo);
-            if(Member(Lineas, codigo)){
+            if(Member(Lineas, codigo))
+            {
                 linea = Find(Lineas, codigo);
                 ultimoId = UltimoIdParada(linea);
                 printf("\n\t###                                                  ###\n\t");
                 printf("###       Ingese una ciudad para agregar parada      ###\n\t");
                 printf("###                                                  ###\n\t\t");
                 scan(co);
-                if(Member(Ciudades, co)){
+                if(Member(Ciudades, co))
+                {
                     ciudParada = Find(Ciudades, co);
                     DarNombreCiudadOrigen(origLinea, linea);
-                    if(CantidadParadasEnLista(linea) == 0){
-                        if(streq(co, origLinea)){
+                    if(CantidadParadasEnLista(linea) == 0)
+                    {
+                        if(streq(co, origLinea))
+                        {
                             ultimoId++;
                             CrearParada(p, ciudParada, ultimoId);
                             InsertParadaEnLista(linea, p);
@@ -237,16 +257,21 @@ int main()
                             printf("###            Parada agregada con exito             ###\n\t");
                             printf("###                                                  ###\n\t");
                             printf("########################################################\n\n");
-                        }else{
-                          printf("\t\n\t########################################################");
-                          printf("\n\t###                                                  ###\n\t");
-                          printf("### La primer parada debe coincidir con la ciudad    ###\n\t");
-                          printf("### origen del recorrido.                            ###\n\t");
-                          printf("###                                                  ###\n\t");
-                          printf("########################################################\n\n");
                         }
-                    } else {
-                        if(!CerroLinea(linea)){
+                        else
+                        {
+                            printf("\t\n\t########################################################");
+                            printf("\n\t###                                                  ###\n\t");
+                            printf("### La primer parada debe coincidir con la ciudad    ###\n\t");
+                            printf("### origen del recorrido.                            ###\n\t");
+                            printf("###                                                  ###\n\t");
+                            printf("########################################################\n\n");
+                        }
+                    }
+                    else
+                    {
+                        if(!CerroLinea(linea))
+                        {
                             ciudParada = Find(Ciudades, co);
                             if(BuscarCiudadEnParadas(DarListaParadasLinea(linea),ciudParada))
                             {
@@ -258,7 +283,8 @@ int main()
                                 break;
                             }
                             ExisteTramoEntreCiudades(G, DarIdUltimaCiudadLinea(linea), DarIDCiudad(ciudParada), encontre);
-                            if(encontre){
+                            if(encontre)
+                            {
                                 ultimoId++;
                                 CrearParada(p, ciudParada, ultimoId);
                                 InsertParadaEnLista(linea, p);
@@ -268,7 +294,9 @@ int main()
                                 printf("###            Parada agregada con exito             ###\n\t");
                                 printf("###                                                  ###\n\t");
                                 printf("########################################################\n\n");
-                           }else {
+                            }
+                            else
+                            {
                                 printf("\t\n\t########################################################");
                                 printf("\n\t###                                                  ###\n\t");
                                 printf("### No se puede ingresar esa parada ya que no existe ###\n\t");
@@ -276,7 +304,9 @@ int main()
                                 printf("###                                                  ###\n\t");
                                 printf("########################################################\n\n");
                             }
-                        }else{
+                        }
+                        else
+                        {
                             printf("\t\n\t########################################################");
                             printf("\n\t###                                                  ###\n\t");
                             printf("### Ya se ingreso el destino, no se pueden ingresr   ###\n\t");
@@ -285,14 +315,18 @@ int main()
                             printf("########################################################\n\n");
                         }
                     }
-                }else{
+                }
+                else
+                {
                     printf("\t\n\t########################################################");
                     printf("\n\t###                                                  ###\n\t");
                     printf("###   No existe una ciudad con dicho nombre.         ###\n\t");
                     printf("###                                                  ###\n\t");
                     printf("########################################################\n\n");
                 }
-            }else{
+            }
+            else
+            {
                 printf("\t\n\t########################################################");
                 printf("\n\t###                                                  ###\n\t");
                 printf("###   No existe una linea con dicho codigo.          ###\n\t");
@@ -310,14 +344,17 @@ int main()
             {
                 if(CantidadParadasEnLista(linea) > 0)
                     MostrarParadas(linea);
-                else{
-                printf("\t\n\t########################################################");
-                printf("\n\t###                                                  ###\n\t");
-                printf("###         Dicha linea no posee paradas.            ###\n\t");
-                printf("###                                                  ###\n\t");
-                printf("########################################################\n\n");
+                else
+                {
+                    printf("\t\n\t########################################################");
+                    printf("\n\t###                                                  ###\n\t");
+                    printf("###         Dicha linea no posee paradas.            ###\n\t");
+                    printf("###                                                  ###\n\t");
+                    printf("########################################################\n\n");
                 }
-            }else{
+            }
+            else
+            {
                 printf("\t\n\t########################################################");
                 printf("\n\t###                                                  ###\n\t");
                 printf("###   No existe una linea con el codigo ingresado    ###\n\t");
