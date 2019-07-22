@@ -28,6 +28,7 @@ int main()
         MenuPrincipal(opcion);
         switch(opcion)
         {
+
         case 1: /*** Crear un tramo entre 2 ciudades ***/
             printf("\t\n\t########################################################");
             printf("\n\t###                                                  ###\n\t");
@@ -76,8 +77,8 @@ int main()
             CiudadO = Find(Ciudades,co);
             CiudadD = Find(Ciudades,cd);
             CrearTramo(t,CiudadO,CiudadD);
-            ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
-            if(!encontre)
+
+            if(!PerteneceAristaGrafo(G,CiudadO,CiudadD))
             {
                 InsertarAristaGrafo(G,t);
                 printf("\t\n\t########################################################");
@@ -95,6 +96,7 @@ int main()
                 printf("########################################################\n\n");
             }
             break;
+
         case 2: /*** Comprobar si existe un tramo entre 2 ciudades ***/
             printf("\t\n\t########################################################");
             printf("\n\t###                                                  ###\n\t");
@@ -142,9 +144,7 @@ int main()
             }
             CiudadO = Find(Ciudades,co);
             CiudadD = Find(Ciudades,cd);
-            CrearTramo(t,CiudadO,CiudadD);
-            ExisteTramoEntreCiudades(G, DarIDCiudad(CiudadO), DarIDCiudad(CiudadD), encontre);
-            if(!encontre)
+            if(!PerteneceAristaGrafo(G,CiudadO, CiudadD))
             {
                 printf("\t\n\t########################################################");
                 printf("\n\t###                                                  ###\n\t");
@@ -163,7 +163,8 @@ int main()
                 printf("########################################################\n\n");
             }
             break;
-        case 3:
+        case 3: /*** Crear una nueva linea en la empresa ***/
+
             printf("\t\n\t########################################################");
             printf("\n\t###                                                  ###\n\t");
             printf("###         Ingrese el codigo de la linea            ###\n\t");
@@ -188,6 +189,13 @@ int main()
                 printf("###       Ingese ciudad destino de la linea          ###\n\t");
                 printf("###                                                  ###\n\t\t");
                 scan(cd);
+                while(streq(co,cd))
+                {
+                    printf("\t###                                                  ###\n");
+                    printf("\t###   La ciudad destino no puede coincidir con el    ###\n\t");
+                    printf("###  origen del tramo, por favor intente nuevamente. ###\n\t\t");
+                    scan(cd);
+                }
                 while(!Member(Ciudades, cd))
                 {
                     printf("\n\t###                                                  ###\n\t");
@@ -196,13 +204,23 @@ int main()
                     scan(cd);
                 }
                 CiudadD = Find(Ciudades, cd);
-                CrearLinea(linea, codigo, CiudadO, CiudadD);
-                Insert(Lineas, linea);
-                printf("\t\n\t########################################################");
-                printf("\n\t###                                                  ###\n\t");
-                printf("###            Linea creada con exito                ###\n\t");
-                printf("###                                                  ###\n\t");
-                printf("########################################################\n\n");
+                ExisteTramoEntreCiudades(G,DarIDCiudad(CiudadO),DarIDCiudad(CiudadD),encontre);
+                if(!encontre){
+                    printf("\t\n\t########################################################");
+                    printf("\n\t###                                                  ###\n\t");
+                    printf("###        No existe un camino entre las ciudades    ###\n\t");
+                    printf("###        ingresadas.                               ###\n\t");
+                    printf("###                                                  ###\n\t");
+                    printf("########################################################\n\n");
+                }else{
+                    CrearLinea(linea, codigo, CiudadO, CiudadD);
+                    Insert(Lineas, linea);
+                    printf("\t\n\t########################################################");
+                    printf("\n\t###                                                  ###\n\t");
+                    printf("###            Linea creada con exito                ###\n\t");
+                    printf("###                                                  ###\n\t");
+                    printf("########################################################\n\n");
+                }
             }
             else
             {
@@ -342,6 +360,7 @@ int main()
             scan(codigo);
             if(Member(Lineas, codigo))
             {
+                linea = Find(Lineas, codigo);
                 if(CantidadParadasEnLista(linea) > 0)
                     MostrarParadas(linea);
                 else
@@ -365,4 +384,6 @@ int main()
         }
     }
     while(opcion != 0);
+
+    //Implementar los destruir
 }

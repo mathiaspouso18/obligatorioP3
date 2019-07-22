@@ -81,7 +81,7 @@ void MostrarParada(ListaParadas listaParadas)
 Boolean BuscarCiudadEnParadas(ListaParadas l, Ciudad c){
     ListaParadas aux = l;
     Boolean encontre = FALSE;
-    while(aux.prim->sig!=NULL && !encontre){
+    while(aux.prim!=NULL && !encontre){
         if(DarIDCiudad(DarCiudadParada(aux.prim->info)) == DarIDCiudad(c)){
             encontre = TRUE;
         }else

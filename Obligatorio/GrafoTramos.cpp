@@ -48,19 +48,21 @@ Boolean ExisteTramoEntreCiudades(Grafo G, int u, int v, Boolean &Existe)
 void DFS(Grafo G, int actual, int v, Boolean visitado[M], Boolean &Existe)
 {
     visitado[actual] = TRUE;
-    if (actual == v)
+    ListaAdy aux = G[actual];
+    if(actual == v)
+    {
         Existe = TRUE;
+    }
     else
     {
-        ListaAdy aux = G[actual];
-        int j=0;
-        while ((aux != NULL) && (!visitado[v]))
+        while ((aux!= NULL) && (!visitado[v]))
         {
             if (!visitado[aux->vert])
                 DFS(G, aux->vert, v, visitado, Existe);
             aux = aux->sig;
         }
-        if (visitado[v])
+        if (visitado[v]){
             Existe = TRUE;
+        }
     }
 }

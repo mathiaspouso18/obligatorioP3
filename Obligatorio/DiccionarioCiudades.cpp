@@ -72,7 +72,7 @@ void CargarDiccionarioCiudades (Diccionario &d){
                     encontre = FALSE;
            }
         }
-        CrearCiudad(c,s,i+1);
+        CrearCiudad(c,s,i);
         InsertDiccionario(d,c);
     }
     printf("\n");
