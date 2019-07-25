@@ -17,7 +17,9 @@ typedef struct
 void CrearListaParadas (ListaParadas &lp);
 int DarUltimoIdParadas(ListaParadas l);
 int DarCantidadParadas(ListaParadas lp);
+////Precondición: El elemento no existe previamente en la lista
 void InsBack (ListaParadas &lp, Parada p);
+////Precondición: El elemento no existe previamente en la lista
 void Insfront (ListaParadas &lp, Parada p);
 void DarNombreUltimaParada(ListaParadas listaParadas, String &ciudadParada);
 void MostrarParada(ListaParadas listaParadas);

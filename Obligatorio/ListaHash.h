@@ -11,9 +11,12 @@ typedef struct nodoL
 typedef Nodo * ListaHash;
 
 void CrearLista (ListaHash &L);
+////Precondición: El elemento no existe previamente
 void InsFrontListaHash(ListaHash &L, Ciudad c);
 Boolean PerteneceLista(ListaHash L, String clave);
+////Precondición: El elemento existo previamente en la lista
 Ciudad DarCiudadLista(ListaHash L);
+////Precondición: El elemento existo previamente en la lista
 void DarNombreLista(ListaHash l, String &nombre);
 void LiberarMemoriaListaHash(ListaHash &h);
 #endif // LISTA_H_INCLUDED

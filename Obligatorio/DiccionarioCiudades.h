@@ -7,7 +7,9 @@ typedef ListaHash Diccionario[B];
 
 void Make(Diccionario &d);
 Boolean Member(Diccionario d, String clave);
+//Precondición: La ciudad no pertenece al hash.
 void InsertDiccionario(Diccionario &d, String n);
+//Precondición: La ciudad pertenece al hash.
 Ciudad Find(Diccionario d, String nombre);
 int h(String clave);
 void CargarDiccionarioCiudades(Diccionario &d);

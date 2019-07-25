@@ -42,13 +42,7 @@ int LargoListaAdy (ListaAdy L){
      return cant;
 }
 
-void DesplegarListaAdy (ListaAdy L){
-    while (L != NULL)
-     {
-        printf ("%d", L->vert);
-        L = L->sig;
-     }
- }
+
 
  void LiberarMemoriaListaAdy(ListaAdy &l)
  {
