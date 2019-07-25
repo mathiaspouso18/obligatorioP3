@@ -89,3 +89,35 @@ Boolean BuscarCiudadEnParadas(ListaParadas l, Ciudad c){
     }
     return encontre;
 }
+
+//void LiberarListaParadas(ListaParadas &l)
+//{
+//    ListaParadas aux = l;
+//    if(aux.prim != NULL){
+//     LiberarListaParadas(aux);
+//     delete(aux.prim);
+//     aux.prim = NULL;
+//    }
+//}
+
+void LiberarListaParadas(ListaParadas &l)
+{
+    if(l.prim!=NULL){
+        if(l.prim == l.ult){
+            delete(l.prim);
+        }else{
+            ListaParadas aux = l;
+            while (aux.prim->sig != l.ult)
+            {
+               aux.prim = aux.prim->sig;
+            }
+            l.ult = aux.prim;
+            l.ult->sig = NULL;
+            aux.prim = aux.ult;
+            delete(aux.prim);
+            LiberarListaParadas(l);
+            }
+    }
+}
+
+

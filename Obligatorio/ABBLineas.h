@@ -19,4 +19,5 @@ void Insert (ABBLineas &a, Linea l);
 Linea Find(ABBLineas a, String codigo);
 void ListarLineas(ABBLineas a);
 void Modify(ABBLineas &a, Linea l);
+void LiberarMemoriaABB (ABBLineas &ABB);
 #endif // ABBLINEAS_H_INCLUDED
