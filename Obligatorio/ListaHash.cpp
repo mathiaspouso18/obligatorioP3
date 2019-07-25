@@ -31,11 +31,22 @@ void InsFrontListaHash(ListaHash &L, Ciudad c)
 {
     ListaHash aux = new Nodo;
     aux -> info = c;
-	aux -> sig = L;
-	L = aux;
+    aux -> sig = L;
+    L = aux;
 }
 
 void DarNombreLista(ListaHash l, String &nombre)
 {
     DarNombreCiudad(l->info, nombre);
+}
+
+void LiberarMemoriaListaHash(ListaHash &l)
+{
+    if(l != NULL)
+    {
+        LiberarMemoriaListaHash(l -> sig);
+        LiberarMemoriaCiudad(l->info);
+        delete (l);
+        l = NULL;
+    }
 }

@@ -77,3 +77,13 @@ void CargarDiccionarioCiudades (Diccionario &d){
     }
     printf("\n");
 }
+
+void LiberarMemoriaDiccionario(Diccionario &d)
+{
+    for(int i = 0; i < B; i++)
+    {
+        LiberarMemoriaListaHash(d[i]);
+    }
+
+    delete d;
+}

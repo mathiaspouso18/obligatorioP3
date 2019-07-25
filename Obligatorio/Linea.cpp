@@ -67,6 +67,6 @@ int DarIdUltimaCiudadLinea(Linea linea)
     DarIdUltimaCiudad(linea.listaParadas);
 }
 
-ListaParadas DarListaParadasLinea (Linea linea){
-     return linea.listaParadas;
+void DarListaParadasLinea (Linea linea, ListaParadas &ListaAux){
+     ListaAux = linea.listaParadas;
 }

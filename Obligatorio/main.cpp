@@ -15,8 +15,8 @@ int main()
     Tramo t;
     Parada p;
     Boolean encontre;
-    CrearGrafo(G);
     Diccionario Ciudades;
+    CrearGrafo(G);
     Make(Ciudades);
     Make(Lineas);
 
@@ -290,8 +290,11 @@ int main()
                     {
                         if(!CerroLinea(linea))
                         {
+                            ListaParadas ListaAux;
+                            CrearListaParadas(ListaAux);
                             ciudParada = Find(Ciudades, co);
-                            if(BuscarCiudadEnParadas(DarListaParadasLinea(linea),ciudParada))
+                            DarListaParadasLinea(linea, ListaAux);
+                            if(BuscarCiudadEnParadas(ListaAux,ciudParada))
                             {
                                 printf("\t\n\t########################################################");
                                 printf("\n\t###                                                  ###\n\t");
@@ -385,5 +388,14 @@ int main()
     }
     while(opcion != 0);
 
-    //Implementar los destruir
+    strdestruir(codigo);
+    strdestruir(co);
+    strdestruir(cd);
+    strdestruir(origLinea);
+    LiberarMemoriaCiudad(CiudadD);
+    LiberarMemoriaCiudad(CiudadO);
+    LiberarMemoriaCiudad(ciudParada);
+    LiberarMemoriaABB(Lineas);
+    LiberarMemoriaDiccionario(Ciudades);
+    LiberarMemoriaGrafo(G);
 }

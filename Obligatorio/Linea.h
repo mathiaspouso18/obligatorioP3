@@ -19,6 +19,6 @@ void DarNombreCiudadOrigen(String &nombre, Linea linea);
 Boolean CerroLinea(Linea linea);
 void MostrarParadas(Linea linea);
 int DarIdUltimaCiudadLinea(Linea linea);
-ListaParadas DarListaParadasLinea (Linea linea);
+void DarListaParadasLinea (Linea linea, ListaParadas &ListaAux);
 
 #endif // LINEA_H_INCLUDED

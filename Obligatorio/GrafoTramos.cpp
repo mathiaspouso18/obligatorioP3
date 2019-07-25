@@ -66,3 +66,12 @@ void DFS(Grafo G, int actual, int v, Boolean visitado[M], Boolean &Existe)
         }
     }
 }
+
+void LiberarMemoriaGrafo(Grafo &G)
+{
+    for(int i = 0; i<M; i++)
+    {
+        LiberarMemoriaListaAdy(G[i]);
+    }
+    delete (G);
+}

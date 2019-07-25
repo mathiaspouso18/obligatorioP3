@@ -49,3 +49,13 @@ void DesplegarListaAdy (ListaAdy L){
         L = L->sig;
      }
  }
+
+ void LiberarMemoriaListaAdy(ListaAdy &l)
+ {
+    if(l != NULL)
+    {
+        LiberarMemoriaListaAdy(l -> sig);
+        delete (l);
+        l = NULL;
+    }
+ }

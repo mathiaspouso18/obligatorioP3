@@ -90,16 +90,6 @@ Boolean BuscarCiudadEnParadas(ListaParadas l, Ciudad c){
     return encontre;
 }
 
-//void LiberarListaParadas(ListaParadas &l)
-//{
-//    ListaParadas aux = l;
-//    if(aux.prim != NULL){
-//     LiberarListaParadas(aux);
-//     delete(aux.prim);
-//     aux.prim = NULL;
-//    }
-//}
-
 void LiberarListaParadas(ListaParadas &l)
 {
     if(l.prim!=NULL){

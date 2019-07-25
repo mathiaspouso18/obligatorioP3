@@ -20,3 +20,8 @@ void MostrarNombreCiudad(Ciudad c)
 {
     print(c.nombre);
 }
+
+void LiberarMemoriaCiudad(Ciudad &c)
+{
+    strdestruir(c.nombre);
+}

@@ -117,3 +117,18 @@ void ListarLineas(ABBLineas a)
         ListarLineas(a->hder);
     }
 }
+
+void LiberarMemoriaABB (ABBLineas &ABB)
+{
+    ListaParadas lp;
+    CrearListaParadas(lp);
+
+	if (ABB != NULL)
+	{
+		LiberarMemoriaABB(ABB -> hizq);
+		LiberarMemoriaABB(ABB -> hder);
+		DarListaParadasLinea(ABB -> info,lp);
+		LiberarListaParadas(lp);
+		delete (ABB);
+	}
+}

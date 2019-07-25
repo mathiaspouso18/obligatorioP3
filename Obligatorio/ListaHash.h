@@ -15,4 +15,5 @@ void InsFrontListaHash(ListaHash &L, Ciudad c);
 Boolean PerteneceLista(ListaHash L, String clave);
 Ciudad DarCiudadLista(ListaHash L);
 void DarNombreLista(ListaHash l, String &nombre);
+void LiberarMemoriaListaHash(ListaHash &h);
 #endif // LISTA_H_INCLUDED

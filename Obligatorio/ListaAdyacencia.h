@@ -14,5 +14,6 @@ void InsFrontListaAdy(ListaAdy &L, int vertice);
 Boolean PerteneceListaAdy (ListaAdy L, int vertice);
 int LargoListaAdy (ListaAdy L);
 void DesplegarListaAdy (ListaAdy L);
+void LiberarMemoriaListaAdy(ListaAdy &l);
 
 #endif // LISTAADYACENCIA_H_INCLUDED

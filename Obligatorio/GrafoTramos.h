@@ -14,5 +14,5 @@ void InsertarAristaGrafo(Grafo &g, Tramo t);
 int gradoVertice(Grafo g, int vertice);
 void DFS(Grafo G, int actual, int v, Boolean visitado[M], Boolean &Existe);
 Boolean ExisteTramoEntreCiudades(Grafo G, int u, int v, Boolean &Existe);
-
+void LiberarMemoriaGrafo(Grafo &G);
 #endif // GRAFOTRAMOS_H_INCLUDED
