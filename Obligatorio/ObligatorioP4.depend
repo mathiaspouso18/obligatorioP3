@@ -1,0 +1,433 @@
+# depslib dependency file v1.0
+1574642845 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camionero.cpp
+	"Camionero.h"
+
+1574638261 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camionero.h
+	"Fecha.h"
+	"String.h"
+	"Objeto.h"
+	<stdio.h>
+
+1574639755 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\fecha.h
+	<stdio.h>
+
+1574613417 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\string.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574779297 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camgrande.cpp
+	"CamGrande.h"
+
+1574779297 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camgrande.h
+	"Camion.h"
+	"Fecha.h"
+
+1574779312 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camion.h
+	"String.h"
+	"Camionero.h"
+	"Objeto.h"
+
+1574779297 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camgranderem.cpp
+	"CamGrandeRem.h"
+
+1574779297 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camgranderem.h
+	"CamGrande.h"
+
+1574724810 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camion.cpp
+	"Camion.h"
+
+1574701605 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\iterador.cpp
+	"Iterador.h"
+
+1574779297 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\main.cpp
+	<iostream>
+	"Menu.h"
+	"CapaLogica.h"
+
+1574639728 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\fecha.cpp
+	"fecha.h"
+
+1574539220 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\string.cpp
+	"String.h"
+
+1574779297 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camsimple.cpp
+	"CamSimple.h"
+
+1574779297 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camsimple.h
+	"Camion.h"
+
+1574343793 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\obligatoriop4.cpp
+	<stdio.h>
+
+1574381269 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\iteradorcamioneros.cpp
+	"IteradorCamioneros.h"
+
+1574380225 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\iteradorcamioneros.h
+	"Camionero.h"
+
+1574702323 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camioneros.cpp
+	"Camioneros.h"
+
+1574608795 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camioneros.h
+	"Iterador.h"
+	"Camionero.h"
+
+1574638221 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\objeto.h
+	"String.h"
+
+1574539096 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\menu.cpp
+	"Menu.h"
+
+1574638233 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\objeto.cpp
+	"Objeto.h"
+
+1574608919 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\iterador.h
+	"Objeto.h"
+
+1574539343 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\menu.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574779324 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\capalogica.cpp
+	"CapaLogica.h"
+
+1574779331 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\capalogica.h
+	"Camioneros.h"
+	"Camiones.h"
+	"EnumMensajes.h"
+
+1574906393 source:c:\users\usuario\documents\github\obligatoriop4\camgrande.cpp
+	"CamGrande.h"
+
+1574806592 c:\users\usuario\documents\github\obligatoriop4\camgrande.h
+	"Camion.h"
+	"Fecha.h"
+
+1574807668 c:\users\usuario\documents\github\obligatoriop4\camion.h
+	"String.h"
+	"Camionero.h"
+	"Objeto.h"
+
+1574622497 c:\users\usuario\documents\github\obligatoriop4\string.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574723425 c:\users\usuario\documents\github\obligatoriop4\camionero.h
+	"Fecha.h"
+	"String.h"
+	"Objeto.h"
+	<stdio.h>
+
+1574723425 c:\users\usuario\documents\github\obligatoriop4\fecha.h
+	<stdio.h>
+
+1574723425 c:\users\usuario\documents\github\obligatoriop4\objeto.h
+	"String.h"
+
+1574903479 source:c:\users\usuario\documents\github\obligatoriop4\camgranderem.cpp
+	"CamGrandeRem.h"
+
+1574903500 c:\users\usuario\documents\github\obligatoriop4\camgranderem.h
+	"CamGrande.h"
+
+1574805366 source:c:\users\usuario\documents\github\obligatoriop4\camion.cpp
+	"Camion.h"
+
+1574723425 source:c:\users\usuario\documents\github\obligatoriop4\camionero.cpp
+	"Camionero.h"
+
+1574806005 source:c:\users\usuario\documents\github\obligatoriop4\camioneros.cpp
+	"Camioneros.h"
+
+1574805366 c:\users\usuario\documents\github\obligatoriop4\camioneros.h
+	"Iterador.h"
+	"Camionero.h"
+
+1574469257 c:\users\usuario\documents\github\obligatoriop4\iterador.h
+	"Objeto.h"
+
+1574807567 source:c:\users\usuario\documents\github\obligatoriop4\camsimple.cpp
+	"CamSimple.h"
+
+1574807567 c:\users\usuario\documents\github\obligatoriop4\camsimple.h
+	"Camion.h"
+
+1574815331 source:c:\users\usuario\documents\github\obligatoriop4\capalogica.cpp
+	"CapaLogica.h"
+
+1574815268 c:\users\usuario\documents\github\obligatoriop4\capalogica.h
+	"Camioneros.h"
+	"Camiones.h"
+	"EnumMensajes.h"
+
+1574723425 source:c:\users\usuario\documents\github\obligatoriop4\fecha.cpp
+	"fecha.h"
+
+1574815384 source:c:\users\usuario\documents\github\obligatoriop4\iterador.cpp
+	"Iterador.h"
+
+1574906281 source:c:\users\usuario\documents\github\obligatoriop4\main.cpp
+	<iostream>
+	"Menu.h"
+	"CapaLogica.h"
+
+1574622497 c:\users\usuario\documents\github\obligatoriop4\menu.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574469257 source:c:\users\usuario\documents\github\obligatoriop4\menu.cpp
+	"Menu.h"
+
+1574723425 source:c:\users\usuario\documents\github\obligatoriop4\objeto.cpp
+	"Objeto.h"
+
+1574622497 source:c:\users\usuario\documents\github\obligatoriop4\string.cpp
+	"String.h"
+
+1574814715 c:\users\usuario\documents\github\obligatoriop4\camiones.h
+	"CamSimple.h"
+	"CamGrandeRem.h"
+	"Iterador.h"
+
+1574460590 source:c:\users\usuario\documents\github\obligatoriop4\iteradorcamioneros.cpp
+	"IteradorCamioneros.h"
+
+1574460590 c:\users\usuario\documents\github\obligatoriop4\iteradorcamioneros.h
+	"Camionero.h"
+
+1574906181 source:c:\users\usuario\documents\github\obligatoriop4\camiones.cpp
+	"Camiones.h"
+
+1574779297 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camiones.h
+	"CamSimple.h"
+	"CamGrande.h"
+	"Iterador.h"
+
+1574779297 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\camiones.cpp
+	"Camiones.h"
+
+1574721011 source:c:\users\mathias\desktop\mathias documentacion\obligatoriop4\enummensajes.cpp
+	"EnumMensajes.h"
+
+1574721307 c:\users\mathias\desktop\mathias documentacion\obligatoriop4\enummensajes.h
+	<stdio.h>
+
+1574805366 c:\users\usuario\documents\github\obligatoriop4\enummensajes.h
+	<stdio.h>
+
+1574806010 source:c:\users\usuario\documents\github\obligatoriop4\enummensajes.cpp
+	"EnumMensajes.h"
+
+1574982152 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camion.cpp
+	"Camion.h"
+
+1574814644 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camion.h
+	"String.h"
+	"Camionero.h"
+	"Objeto.h"
+
+1574983250 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\string.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574809504 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camionero.h
+	"Fecha.h"
+	"String.h"
+	"Objeto.h"
+	<stdio.h>
+
+1574809504 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\fecha.h
+	<stdio.h>
+
+1574809504 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\objeto.h
+	"String.h"
+
+1574809504 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camionero.cpp
+	"Camionero.h"
+
+1574814644 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camioneros.cpp
+	"Camioneros.h"
+
+1574809504 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camioneros.h
+	"Iterador.h"
+	"Camionero.h"
+
+1574468546 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\iterador.h
+	"Objeto.h"
+
+1574814644 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camsimple.cpp
+	"CamSimple.h"
+
+1574814644 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camsimple.h
+	"Camion.h"
+
+1574814644 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\enummensajes.cpp
+	"EnumMensajes.h"
+
+1574809504 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\enummensajes.h
+	<stdio.h>
+
+1574809504 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\fecha.cpp
+	"fecha.h"
+
+1574814521 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\iterador.cpp
+	"Iterador.h"
+
+1574979378 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\menu.cpp
+	"Menu.h"
+
+1574809504 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\menu.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574809504 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\objeto.cpp
+	"Objeto.h"
+
+1574982082 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\string.cpp
+	"String.h"
+
+1574978000 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camgrande.cpp
+	"CamGrande.h"
+
+1574814644 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camgrande.h
+	"Camion.h"
+	"Fecha.h"
+
+1574978000 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camgranderem.cpp
+	"CamGrandeRem.h"
+
+1574978000 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camgranderem.h
+	"CamGrande.h"
+
+1574984700 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camiones.cpp
+	"Camiones.h"
+
+1574983272 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\camiones.h
+	"CamSimple.h"
+	"CamGrandeRem.h"
+	"Iterador.h"
+
+1574983232 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\capalogica.cpp
+	"CapaLogica.h"
+
+1574983232 c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\capalogica.h
+	"Camioneros.h"
+	"Camiones.h"
+	"EnumMensajes.h"
+
+1574984884 source:c:\users\admin.desktop-0q23ca9\documents\github\obligatoriop4\main.cpp
+	<iostream>
+	"Menu.h"
+	"CapaLogica.h"
+
+1575171721 source:/home/majo/Escritorio/ObligatorioP4-master/CamGrande.cpp
+	"CamGrande.h"
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/CamGrande.h
+	"Camion.h"
+	"Fecha.h"
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/Camion.h
+	"String.h"
+	"Camionero.h"
+	"Objeto.h"
+
+1575165759 /home/majo/Escritorio/ObligatorioP4-master/String.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/Camionero.h
+	"Fecha.h"
+	"String.h"
+	"Objeto.h"
+	<stdio.h>
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/Fecha.h
+	<stdio.h>
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/Objeto.h
+	"String.h"
+
+1575171851 source:/home/majo/Escritorio/ObligatorioP4-master/CamGrandeRem.cpp
+	"CamGrandeRem.h"
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/CamGrandeRem.h
+	"CamGrande.h"
+
+1574985082 source:/home/majo/Escritorio/ObligatorioP4-master/Camion.cpp
+	"Camion.h"
+
+1574985082 source:/home/majo/Escritorio/ObligatorioP4-master/Camionero.cpp
+	"Camionero.h"
+
+1575168984 source:/home/majo/Escritorio/ObligatorioP4-master/Camioneros.cpp
+	"Camioneros.h"
+
+1575169000 /home/majo/Escritorio/ObligatorioP4-master/Camioneros.h
+	"Iterador.h"
+	"Camionero.h"
+	"EnumMensajes.h"
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/Iterador.h
+	"Objeto.h"
+
+1575171278 source:/home/majo/Escritorio/ObligatorioP4-master/Camiones.cpp
+	"Camiones.h"
+
+1575169092 /home/majo/Escritorio/ObligatorioP4-master/Camiones.h
+	"CamSimple.h"
+	"CamGrandeRem.h"
+	"Iterador.h"
+	"EnumMensajes.h"
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/CamSimple.h
+	"Camion.h"
+
+1574985082 source:/home/majo/Escritorio/ObligatorioP4-master/CamSimple.cpp
+	"CamSimple.h"
+
+1575171026 source:/home/majo/Escritorio/ObligatorioP4-master/CapaLogica.cpp
+	"CapaLogica.h"
+
+1575169113 /home/majo/Escritorio/ObligatorioP4-master/CapaLogica.h
+	"Camioneros.h"
+	"Camiones.h"
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/EnumMensajes.h
+	<stdio.h>
+
+1574985082 source:/home/majo/Escritorio/ObligatorioP4-master/EnumMensajes.cpp
+	"EnumMensajes.h"
+
+1575162126 source:/home/majo/Escritorio/ObligatorioP4-master/Fecha.cpp
+	"Fecha.h"
+
+1574985082 source:/home/majo/Escritorio/ObligatorioP4-master/Iterador.cpp
+	"Iterador.h"
+
+1575171363 source:/home/majo/Escritorio/ObligatorioP4-master/main.cpp
+	<iostream>
+	"Menu.h"
+	"CapaLogica.h"
+
+1574985082 /home/majo/Escritorio/ObligatorioP4-master/Menu.h
+	<string.h>
+	<stdio.h>
+	<iostream>
+
+1574985082 source:/home/majo/Escritorio/ObligatorioP4-master/Menu.cpp
+	"Menu.h"
+
+1574985082 source:/home/majo/Escritorio/ObligatorioP4-master/Objeto.cpp
+	"Objeto.h"
+
+1575166698 source:/home/majo/Escritorio/ObligatorioP4-master/String.cpp
+	"String.h"
+
